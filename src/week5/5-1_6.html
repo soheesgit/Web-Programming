@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 1px solid chocolate;
+            padding-right: 30px;
+            padding-left: 30px;
+            width: 270px;
+            height: 450px;
+
+        }
+        div h4{
+            text-align: center;
+        }
+        ol {
+            list-style-type: none;
+            padding-left: 60px;
+
+        }
+        ol li {
+            position: relative;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+
+        ol li::marker {
+            color: yellowgreen;
+            font-size: 50px;
+            font-style: italic;
+            font-weight: bold;
+            padding-top: 5px;
+
+        }
+        li:nth-child(1)::marker { content: '1. '; }
+        li:nth-child(2)::marker { content: '2. '; }
+        li:nth-child(3)::marker { content: '3. '; }
+        li:nth-child(4)::marker { content: '4. '; }
+
+        ol li span {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h4>카푸치노</h4>
+<hr>
+<div>
+    <h4>카푸치노 만드는 순서</h4>
+    <ol>
+        <li><span>에스프레소를 추출한다. 반드시 에스프레소 콩을 사용해야 제맛이 난다.</span></li>
+        <li><span>용기에 우유를 넣어 중탕을 하거나 끓기 직전까지 데운다.</span></li>
+        <li><span>몇 초간 저어 충분히 거품을 낸다. 거품이 충분하지 않으면 풍미가 떨어진다.</span></li>
+        <li><span>컵에 계피 막대를 꽂고 커피를 부은 후 우유 거품을 붓는다. 휘핑크림을 얹고 계피가루를 뿌린다.</span></li>
+    </ol>
+</div>
+</body>
+</html>

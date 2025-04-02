@@ -1,0 +1,70 @@
+<!--피피티 조건 반영-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문서구조화</title>
+    <style>
+        hr {width: 380px}
+        #wrapper {width: 600px;}
+
+        header {height: 120px; background: blue;}
+        hgroup h1 {color: white; padding: 10px 0 0 20px;}
+        hgroup h5 {color: white; padding-left: 20px;}
+
+        nav {width: 580px; height: 40px; background: skyblue; margin-left: 20px;}
+        nav li {float: left; list-style-type: none; padding: 0 15px;}
+
+        section { width: 400px; background: #FFF; border: solid; margin-top: 24px;}
+        hgroup h2 {padding: 5px 0 0 10px;}
+        article {width: 400px; background: #CCC;}
+        article p {padding: 5px;}
+
+        aside { width: 200px; height: 230px; background: #666; float: right; margin-top: 10px;}
+        hgroup h3 { color: #fff; padding: 10px 0 0 10px;}
+        aside article {width: 200px; background: #666; color: white;}
+
+        footer {height: 40px; background: darkcyan; margin-top: -15px;}
+        footer p {color: white; padding: 10px 0 0 10px;}
+    </style>
+</head>
+<body>
+<header id="wrapper">
+    <hgroup>
+        <h1>header</h1>
+        <h5>header의 두번째 제목입니다.</h5>
+    </hgroup>
+</header>
+<nav>
+    <li>메뉴 1</li>
+    <li>메뉴 2</li>
+    <li>메뉴 3</li>
+    <li>메뉴 4</li>
+    <li>메뉴 5</li>
+</nav>
+<aside>
+    <hgroup>
+        <article>
+            <h3>aside</h3>
+            aside의 본문입니다.</article>
+    </hgroup>
+</aside>
+<section>
+    <article>
+        <p>
+        <hgroup> <h2>article 1</h2> article 1의 본문입니다. </hgroup>
+        </p>
+    </article>
+    <hr>
+    <article>
+        <p>
+        <hgroup> <h2>article 2</h2> article 2의 본문입니다.</hgroup>
+        </p>
+    </article>
+</section>
+<footer>
+    <p>footer</p>
+</footer>
+</body>
+</html>

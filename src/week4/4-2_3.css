@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "휴먼편지체";
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background: aliceblue;
+}
+header h1{
+    color:brown;
+    text-align:center;
+}
+header p{
+    font-size:1em;
+    font-family: "휴먼편지체";
+}
+main{
+    color:blue;
+}
+main h2{
+    text-shadow: 3px 3px 5px skyblue;
+}
+main ul{
+    border: 1px dotted black;
+}
+hr{
+    border:1px solid black;
+}
