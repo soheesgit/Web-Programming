@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>큰 자리수와 낮은자리수</title>
+</head>
+<body>
+<h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+<hr>
+<script>
+  var num = prompt("숫자 입력");
+  num = Math.floor(num);
+
+  var numStr = num.toString();
+  var firstDigit = numStr[0];
+  var lastDigit = (num % 10).toString();
+
+  if (firstDigit === lastDigit) {
+    document.write(num + ": 같음");
+  } else {
+    document.write(num + ": 다름");
+  }
+</script>
+</body>
+</html>
