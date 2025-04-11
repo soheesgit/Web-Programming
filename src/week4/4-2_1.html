@@ -5,42 +5,24 @@
     <title>연습문제 1</title>
     <style>
         h1 {
-            display: flex;
-            justify-content: center;
-            color : yellow;
-            text-shadow: 3px 3px 5px blueviolet;
+            text-align: center;
+            color: yellow;
+            text-shadow: 3px 3px 3px purple;
         }
-        div.box{
-            width: 150px;
+        img {
             height: 150px;
-            border: grey;
-            float:left;
-            margin-right: 10px;
+            width: 150px;
         }
-        #b1{
-            background-image: url("네이버.png");
-            background-size: 150px 150px;
-
-        }
-        #b2{
-            background-image: url("유튜브.png");
-            background-size: 150px 150px;
-        }
-        #b3{
-            background-image: url("구글.png");
-            background-size: 150px 150px;
-        }
-
-        .box:hover {
-            box-shadow: 0 0 10px blue;
+        img:hover {
+            box-shadow: 0 0 10px 3px purple;
         }
     </style>
 </head>
 <body>
 <h1>Most Visited Pages</h1>
 <hr>
-<a href="https://www.naver.com"><div class="box" id="b1"></div></a>
-<a href="https://www.youtube.com"><div class="box" id="b2"></div></a>
-<a href="https://www.google.com"><div class="box" id="b3"></div></a>
+<a href="https://www.google.com"><img src="구글.png"></a>
+<a href="https://www.naver.com"><img src="네이버.png"></a>
+<a href="https://www.youtube.com"><img src="유튜브.png"></a>
 </body>
 </html>

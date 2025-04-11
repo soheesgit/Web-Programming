@@ -1,28 +1,27 @@
-@font-face {
+body {
+    background-color: aliceblue;
+}
+h1 {
+    color: saddlebrown;
+    text-align: center;
+}
+header hr {
+    border: 1px solid black;
+}
+
+header p {
     font-family: "휴먼편지체";
-    font-weight: normal;
-    font-style: normal;
+    font-size: 1em;
+    text-indent : 1em;
+
 }
-body{
-    background: aliceblue;
+h3 {
+    color: blue;
+    text-shadow: 3px 3px 3px skyblue;
 }
-header h1{
-    color:brown;
-    text-align:center;
-}
-header p{
-    font-size:1em;
-    font-family: "휴먼편지체";
-}
-main{
-    color:blue;
-}
-main h2{
-    text-shadow: 3px 3px 5px skyblue;
-}
-main ul{
+ul {
     border: 1px dotted black;
 }
-hr{
-    border:1px solid black;
+li {
+    color: blue;
 }
