@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math.random()으로 랜덤한 색 만들기</title>
+</head>
+<body>
+<h3>3개의 랜덤한 색 만들기</h3>
+<hr>
+<script>
+    for (let i = 0; i < 3; i++) {
+        var color = new Array(3);
+        for (let j = 0; j < 3; j++) {
+            color[j] = Math.floor(Math.random() * 257);
+        }
+        var rgbStr = "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+        document.write("<div style='background-color:" + rgbStr + "; width: 200px; height: 50px; display: inline-block;'>");
+        document.write("<p>" + rgbStr + "</p>");
+        document.write("</div>");
+    }
+    </script>
+    </body>
+    </html>
