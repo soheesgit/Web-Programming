@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>정답의 동적 삽입</h2>
+<hr>
+<div>
+    <p>Q1. What is the learning technique that ~</p>
+    <input type="button" value="A1." onclick="show(this, 'a')">
+</div>
+<div>
+    <p>Q2. What is the learning technique that ~</p>
+    <input type="button" value="A2." onclick="show(this, 'b')">
+</div>
+<div>
+    <p>Q3. What is the learning technique that ~</p>
+    <input type="button" value="A3." onclick="show(this, 'c')">
+</div>
+<script>
+    function show(obj, pro) {
+        var div = obj.parentElement;
+
+        // 이미 답변이 추가되어 있으면 무시
+        if (div.querySelector('.answer')) {
+            return;
+        }
+
+        var newDiv = document.createElement('div');
+        newDiv.className = 'answer';
+
+        if (pro === 'a') {
+            newDiv.textContent = 'Reinforcement Learning';
+        } else if (pro === 'b') {
+            newDiv.textContent = 'Supervised Learning';
+        } else if (pro === 'c') {
+            newDiv.textContent = 'Unsupervised Learning';
+        }
+
+        div.appendChild(newDiv);
+
+        newDiv.onclick = function() {
+            newDiv.remove();
+        };
+    }
+</script>
+</body>
+</html>

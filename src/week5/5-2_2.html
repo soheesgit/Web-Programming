@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .title{
+            position: relative;
+            left: 10%;
+            width: 60%;
+            padding: 5px;
+            text-align: center;
+            border-style: double;
+        }
+        .title:hover{
+            border-style: double;
+            background-color: lightgray;
+        }
+        .main{
+            display: flex;
+        }
+        p{
+            width: 1200px;
+            font-size: 20px;
+        }
+        img {
+            width: 100px;
+            height: 60px;
+            transition: width, height 5s;
+            margin-inside: 5px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #img:hover {
+            width: 150px;
+            height: 110px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="title">
+    <h1>5G (Wikipedia)</h1>
+</div>
+<br>
+<div class="main">
+    <p>5G networks are cellular networks, in which the service area is divided into small geographical areas calles cells. All 5G wireless devices in a cell communicate by radio with a cellular base station via fixed antennas, over frequenct channels assigned by the base station. The base stations, termed gNodeBs, are connected to switching centers in the telephone network and routers for Internet access by high-bandwidth optical fiber or wireless backhaul connections.
+    </p>
+    <img src="가나디.png" id="img">
+</div>
+</body>
+</html>

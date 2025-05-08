@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    img{
+      width: 13em;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+<h3>Z-index 스타일로 프로퍼티</h3>
+<hr>
+<img src="spade-7.png" style="z-index: 1;" onclick="change(this)">
+<img src="spade-3.png" style="z-index: 2;" onclick="change(this)">
+<img src="spade-2.png" style="z-index: 3;" onclick="change(this)">
+<img src="spade-A.png" style="z-index: 4; width: 12.5em" onclick="change(this)">
+<script>
+  function change(obj){
+    var zindex = parseInt(obj.style.zIndex);
+    obj.style.zIndex = zindex - 5;
+  }
+</script>
+</body>
+</html>

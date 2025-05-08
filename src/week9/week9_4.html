@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>innerHTML</h2>
+<hr>
+<div id="div">
+    <p onclick="message()">이번 여름에는 어디로 여행을 갈까요</p>
+</div>
+<script>
+    function message() {
+        var prompts = prompt('HTML 텍스트 혹은 그냥 텍스트를 입력하세요');
+        if(prompts!=null){
+            document.getElementById('div').innerHTML = prompts;
+        }
+    }
+</script>
+</body>
+</html>

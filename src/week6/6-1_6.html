@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prac6-B</title>
+    <style>
+        table {
+            border-left: 2px solid gray;
+            border-top: 2px solid gray;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            border-left: 2px solid black;
+            border-top: 2px solid black;
+            border-right: 2px solid gray;
+            border-bottom: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var row = prompt("행을 입력하세요");
+    var col = prompt("열을 입력하세요");
+
+    row = parseInt(row);
+    col = parseInt(col);
+
+    document.write("<table>");
+    for (let i = 0; i < row; i++) {
+        document.write("<tr>");
+        for (let j = 0; j < col; j++) {
+            document.write("<td></td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+</script>
+</body>
+</html>

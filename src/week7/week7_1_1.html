@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>난수</title>
+</head>
+<body>
+<h2>난수 10개 생성</h2>
+<hr>
+<script>
+    var arr = new Array(10);
+    for (let i = 0; i < 10; i++) {
+        arr[i] = Math.floor(Math.random() * 101);
+        document.write(arr[i] + " ");
+    }
+    arr.sort(function (a, b) {
+        if (a > b) return 1;
+        if (a == b) return 0;
+        if (a < b) return -1;
+    });
+    document.write("<hr>제일 큰 수는 " + arr[9] + "<hr>");
+
+    for (let i = 0; i < 10; i++) {
+        document.write(arr[i] + " ");
+    }
+</script>
+</body>
+</html>

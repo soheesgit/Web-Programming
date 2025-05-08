@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>관심 기업</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #1d1d1f;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0071e3;
+        }
+
+        .main {
+            padding: 80px 60px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .company {
+            background: #fff;
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #0071e3;
+        }
+
+        p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #aaa;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div><strong>문소희</strong></div>
+    <nav>
+        <a href="index.html">본인 소개</a>
+        <a href="skills.html">관심 기술</a>
+        <a href="companies.html">관심 기업</a>
+    </nav>
+</header>
+
+<div class="main">
+    <h1>관심 있는 기업 소개</h1>
+
+    <div class="company">
+        <h2>1. 네이버 (Naver Corporation)</h2>
+        <p><strong>관심 이유:</strong> 기술 중심의 문제 해결, AI/클라우드 분야의 선도 기업으로 성장 중인 모습이 인상적입니다.</p>
+        <p><strong>기술 스택:</strong> Spring, Java, Python, TensorFlow, Vue.js 등 다양한 기술 적용</p>
+        <p><strong>채용 특징:</strong> 개발 직군은 실무 중심 코딩 테스트와 기술 면접 중심</p>
+        <p><strong>관련 경험:</strong> REST API 개발, 자연어 처리 프로젝트 경험</p>
+    </div>
+
+    <div class="company">
+        <h2>2. SI 기업 (예: LG CNS, SK C&C, 삼성 SDS 등)</h2>
+        <p><strong>관심 이유:</strong> 다양한 산업군에 IT 솔루션 제공 경험, 실무 중심 프로젝트에 참여 기회 多</p>
+        <p><strong>희망 직무:</strong> 백엔드 개발자 (Java + Spring 기반)</p>
+        <p><strong>준비 계획:</strong> 프로젝트 기반 실무 능력 강화, 대규모 시스템 구조 학습, 인턴 지원 예정</p>
+    </div>
+
+    <div class="company">
+        <h2>Future Plan</h2>
+        <p>- 올해 안에 PCCE, SQLD, ADsP 자격증 취득</p>
+        <p>- 백엔드 포트폴리오 2개 이상 완성</p>
+        <p>- 하반기 LG CNS / NAVER 개발 직군 인턴십 지원</p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 문소희. All rights reserved.
+</footer>
+
+</body>
+</html>

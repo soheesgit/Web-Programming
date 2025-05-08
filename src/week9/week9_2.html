@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클릭해야 보는 랜덤 계산식 (0~100 범위)</title>
+</head>
+<body>
+<h3>계산해봅시다 (0~100 범위)</h3>
+<hr>
+<script>
+    function randInt() {
+        return Math.floor(Math.random() * 101);
+    }
+
+    const a = randInt();
+    const b = randInt();
+    const sum = a + b;
+    document.write(
+        a + " + " + b + " = " +
+        "<span style='cursor:pointer' " +
+        "onclick=\"this.textContent='" + sum + "'\">" +
+        "답" +
+        "</span><br>"
+    );
+
+    const c = randInt();
+    const d = randInt();
+    const e = randInt();
+    const prodSum = c * d + e;
+    document.write(
+        c + " * " + d + " + " + e + " = " +
+        "<span style='cursor:pointer' " +
+        "onclick=\"this.textContent='" + prodSum + "'\">" +
+        "답" +
+        "</span><br>"
+    );
+
+    const f = randInt();
+    let g;
+    do { g = randInt(); } while (g === 0);
+    const h = randInt();
+    const i = randInt();
+    const calc3 = (f / g - h * i);
+    document.write(
+        f + " / " + g + " - " + h + " * " + i + " = " +
+        "<span style='cursor:pointer' " +
+        "onclick=\"this.textContent='" + calc3 + "'\">" +
+        "답" +
+        "</span>"
+    );
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            background-color: #88ac43;
+        }
+        li{
+            list-style:upper-alpha;
+        }
+    </style>
+</head>
+<body>
+<h2>라면을 끓이는 순서</h2>
+<hr>
+<ul onclick="add()" id="show">
+    <li>물을 끓인다.</li>
+</ul>
+<script>
+    function add() {
+        var add = prompt('라면을 끓이는 순서를 입력하라');
+        var ul = document.getElementById('show');
+
+        if (add != null) {
+            var li = document.createElement('li');
+            li.textContent = add;
+            ul.appendChild(li);
+        }
+    }
+</script>
+</body>
+</html>
