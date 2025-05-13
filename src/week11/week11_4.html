@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>산수 문제를 풀어 봅시다</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    hr {
+      margin: 16px 0;
+    }
+
+    .problem-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .problem-row span {
+      min-width: 80px;
+      display: inline-block;
+    }
+
+    input[type="text"] {
+      width: 60px;
+    }
+
+    .strike {
+      text-decoration: line-through;
+    }
+
+    #score {
+      margin: 0 10px;
+    }
+
+    button {
+      margin-top: 8px;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+<h2>산수 문제를 풀어 봅시다.</h2>
+<p>
+  자동으로 문제가 만들어집니다. 답 입력 후 채점 버튼을 누르세요.<br>
+  다시 버튼을 누르면 새로운 문제가 출력됩니다. 나누기 결과는 정수입니다.
+</p>
+<hr>
+<form id="quizForm" autocomplete="off">
+  <div id="problems"></div>
+  <div style="margin-top: 12px;">
+    <button type="button" onclick="checkAnswers()">채점</button>
+    <span id="score">0</span>
+    <button type="button" onclick="generateProblems()">다시</button>
+  </div>
+</form>
+
+<script>
+  const numProblems = 4;
+  let problems = [];
+
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function generateProblems() {
+    problems = [];
+    const operators = ['+', '-', '*', '/'];
+    const problemsDiv = document.getElementById('problems');
+    problemsDiv.innerHTML = '';
+    document.getElementById('score').textContent = '0';
+
+    for (let i = 0; i < numProblems; i++) {
+      let op = operators[randomInt(0, operators.length - 1)];
+      let a, b, question, answer;
+
+      if (op === '+') {
+        a = randomInt(1, 20);
+        b = randomInt(1, 20);
+        answer = a + b;
+      } else if (op === '-') {
+        a = randomInt(1, 20);
+        b = randomInt(1, 20);
+        answer = a - b;
+      } else if (op === '*') {
+        a = randomInt(1, 12);
+        b = randomInt(1, 12);
+        answer = a * b;
+      } else if (op === '/') {
+        b = randomInt(1, 10);
+        answer = randomInt(1, 10);
+        a = b * answer;
+      }
+
+      question = `${a}${op}${b}`;
+      problems.push({ question, answer });
+
+      problemsDiv.innerHTML += `
+        <div class="problem-row" id="row${i}">
+          <span id="q${i}">${question}</span>
+          <input type="text" id="a${i}">
+        </div>
+      `;
+    }
+  }
+
+  function checkAnswers() {
+    let score = 0;
+    for (let i = 0; i < problems.length; i++) {
+      const userInput = document.getElementById('a' + i).value.trim();
+      const correct = Number(userInput) === problems[i].answer;
+      const qSpan = document.getElementById('q' + i);
+      if (correct) {
+        qSpan.className = '';
+      } else {
+        qSpan.className = 'strike';
+      }
+      if (correct) score++;
+    }
+    document.getElementById('score').textContent = score;
+  }
+
+  window.onload = generateProblems;
+</script>
+</body>
+</html>

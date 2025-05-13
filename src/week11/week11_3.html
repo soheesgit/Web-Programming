@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval()/clearInterval() 시계</title>
+    <style>
+        #clock {
+            border: 1px solid black;
+            background-color: #e0f1f8;
+            width: 110px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h3>div 태그에 시계 만들기</h3>
+<p>시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다.</p>
+<hr>
+<div id="clock"></div>
+<script>
+    let clockDiv = document.getElementById("clock");
+    let timerId = null;
+
+    function updateClock() {
+        const now = new Date();
+        clockDiv.textContent = now.toLocaleTimeString();
+    }
+
+    function startClock() {
+        updateClock();
+        timerId = setInterval(updateClock, 1000);
+        clockDiv.style.color = "black";
+    }
+
+    function stopClock() {
+        clearInterval(timerId);
+        timerId = null;
+        clockDiv.style.color = "lightgray";
+    }
+
+    clockDiv.addEventListener("click", () => {
+        if (timerId) {
+            stopClock();
+        } else {
+            startClock();
+        }
+    });
+
+    window.onload = startClock;
+</script>
+</body>
+</html>

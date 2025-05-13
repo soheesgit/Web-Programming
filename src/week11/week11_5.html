@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>산수를 풀어 봅시다</title>
+    <style>
+        body {
+            font-family: '맑은 고딕', sans-serif;
+            background: #fff;
+            margin: 40px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.7em;
+        }
+
+        .desc {
+            margin-bottom: 1em;
+        }
+
+        .timer {
+            margin-bottom: 1em;
+        }
+
+        .problem-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 16px;
+        }
+
+        .problem-row span {
+            min-width: 80px;
+            display: inline-block;
+        }
+
+        input[type="text"] {
+            width: 60px;
+        }
+
+        .strike {
+            text-decoration: line-through;
+        }
+
+        #score {
+            margin-left: 10px;
+        }
+
+        button {
+            margin-top: 8px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+<h2>산수 문제를 풀어 봅시다.</h2>
+<div class="desc">
+    문제는 자동으로 생성되며, 10초가 지나면 자동 채점됩니다.<br>
+    남은 시간 <span class="timer" id="time">10</span>
+</div>
+<hr>
+<form id="quizForm" autocomplete="off" onsubmit="return false;">
+    <div id="problems"></div>
+    <button type="button" onclick="resetQuiz()">다시</button>
+    <span id="score">0</span>
+</form>
+
+<script>
+    const numProblems = 4;
+    let problems = [];
+    let timer = null;
+    let timeLeft = 10;
+    let checked = false;
+
+    function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function generateProblems() {
+        problems = [];
+        const operators = ['+', '-', '*', '/'];
+        for (let i = 0; i < numProblems; i++) {
+            let op = operators[randomInt(0, operators.length - 1)];
+            let a, b, answer;
+            if (op === '+') {
+                a = randomInt(1, 20);
+                b = randomInt(1, 20);
+                answer = a + b;
+            } else if (op === '-') {
+                a = randomInt(1, 20);
+                b = randomInt(1, 20);
+                answer = a - b;
+            } else if (op === '*') {
+                a = randomInt(1, 12);
+                b = randomInt(1, 12);
+                answer = a * b;
+            } else if (op === '/') {
+                b = randomInt(1, 10);
+                answer = randomInt(1, 10);
+                a = b * answer;
+            }
+            problems.push({ question: `${a}${op}${b}`, answer });
+        }
+    }
+
+    function renderProblems() {
+        const problemsDiv = document.getElementById('problems');
+        problemsDiv.innerHTML = '';
+        for (let i = 0; i < problems.length; i++) {
+            problemsDiv.innerHTML += `
+                <div class="problem-row">
+                    <span id="q${i}" class="">${problems[i].question}</span>
+                    <input type="text" id="a${i}" autocomplete="off">
+                </div>
+            `;
+        }
+    }
+
+    function checkAnswers() {
+        let score = 0;
+        checked = true;
+        for (let i = 0; i < problems.length; i++) {
+            const userInput = document.getElementById('a' + i).value.trim();
+            const qSpan = document.getElementById('q' + i);
+            if (Number(userInput) === problems[i].answer) {
+                qSpan.className = '';
+                score++;
+            } else {
+                qSpan.className = 'strike';
+            }
+            document.getElementById('a' + i).disabled = true;
+        }
+        document.getElementById('score').textContent = score;
+    }
+
+    function startTimer() {
+        timeLeft = 10;
+        document.getElementById('time').textContent = timeLeft;
+        if (timer) clearInterval(timer);
+        timer = setInterval(() => {
+            timeLeft--;
+            document.getElementById('time').textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                checkAnswers();
+            }
+        }, 1000);
+    }
+
+    function resetQuiz() {
+        checked = false;
+        generateProblems();
+        renderProblems();
+        document.getElementById('score').textContent = '0';
+        startTimer();
+    }
+
+    window.onload = resetQuiz;
+</script>
+</body>
+</html>
