@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>관심 기업</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <div><strong>문소희</strong></div>
+    <nav>
+        <a href="intro.html">본인 소개</a>
+        <a href="skills.html">관심 기술</a>
+        <a href="future.html">관심 기업</a>
+    </nav>
+</header>
+
+<h1 style="text-align: center; margin-top: 40px;">Future Plan</h1>
+
+<section class="timeline" id="plan">
+    <div class="current-status" id="current">
+        <div class="current-card">
+            <h2>현재 진행중인 일정</h2>
+            <ul>
+                <li>창업동아리: AI 기반 동네 추천 플랫폼 개발</li>
+                <li>진행 기간: 2025/05/20 ~ 2026/02/28</li>
+                <li>NCF 기반 추천 시스템 구현 (백엔드 담당)</li>
+            </ul>
+        </div>
+        <img src="future_under.png" alt="아래로 스크롤" class="scroll-icon" onclick="scrollToNextBlock()" />
+    </div>
+
+    <section class="month-block" id="july">
+        <h2>7월</h2>
+        <ul>
+            <li>운영체제 공부 (혼자 공부하는 컴구+운영체제)</li>
+            <li>창업 동아리 조직화</li>
+            <li>7/7: ADSP 접수, 7/21: SQLD 접수, 7/28: 토익 접수</li>
+        </ul>
+    </section>
+
+    <section class="month-block" id="august">
+        <h2>8월</h2>
+        <ul>
+            <li>8/9: ADSP 시험 응시</li>
+            <li>8/23: SQLD 시험 응시</li>
+            <li>토익 집중 학습</li>
+        </ul>
+    </section>
+
+    <section class="month-block" id="september">
+        <h2>9월</h2>
+        <ul>
+            <li>9/14: 토익 응시</li>
+            <li>9/28: 토익 응시</li>
+        </ul>
+    </section>
+
+    <section class="month-block" id="oct-dec">
+        <h2>10월 ~ 12월</h2>
+        <ul>
+            <li>코딩테스트, Java, Spring Boot 공부</li>
+            <li>프로젝트 병행 + 학업 집중</li>
+        </ul>
+    </section>
+
+    <section class="month-block" id="jan">
+        <h2>2026년 1월</h2>
+        <ul>
+            <li>AI 플랫폼 마무리</li>
+            <li>정보처리기사 필기 접수</li>
+            <li>새 프로젝트 계획 / 인턴 여부 결정</li>
+        </ul>
+    </section>
+
+    <section class="month-block" id="feb-jun">
+        <h2>2026년 2~6월</h2>
+        <ul>
+            <li>2월: 정보처리기사 필기 응시</li>
+            <li>3월: 캡스톤 프로젝트 준비</li>
+            <li>4월: 실기 시험 응시</li>
+            <li>6월: 방학 인턴 탐색 (<a href="https://groupby.kr/programs" target="_blank">groupby.kr</a>)</li>
+        </ul>
+    </section>
+</section>
+<button id="scrollToTop" class="scroll-top-btn" onclick="scrollToTop()">↑</button>
+
+<footer>
+    &copy; 2025 문소희. All rights reserved.
+</footer>
+
+<script>
+    const blocks = document.querySelectorAll(".month-block");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                blocks.forEach(block => block.classList.remove("focused"));
+                entry.target.classList.add("focused");
+            }
+        });
+    }, { threshold: 0.6 });
+
+    blocks.forEach(block => observer.observe(block));
+
+    function scrollToNextBlock() {
+        const next = document.getElementById("july");
+        next.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    window.addEventListener("scroll", () => {
+        const scrollBtn = document.getElementById("scrollToTop");
+        if (scrollBtn && window.scrollY > window.innerHeight * 0.5) {
+            scrollBtn.classList.add("visible");
+        } else {
+            scrollBtn.classList.remove("visible");
+        }
+    });
+</script>
+</body>
+</html>
