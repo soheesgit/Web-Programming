@@ -3,133 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>관심 기술</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f7;
-            color: #1d1d1f;
-        }
-
-        header {
-            background-color: #ffffff;
-            padding: 20px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #1d1d1f;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #0071e3;
-        }
-
-        .main {
-            padding: 80px 60px;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        section {
-            max-width: 900px;
-            line-height: 1.7;
-        }
-
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 10px;
-            font-size: 22px;
-            color: #333;
-        }
-
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #aaa;
-            font-size: 14px;
-            border-top: 1px solid #eee;
-            margin-top: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <div><strong>문소희</strong></div>
     <nav>
-        <a href="index.html">본인 소개</a>
+        <a href="intro.html">본인 소개</a>
         <a href="skills.html">관심 기술</a>
-        <a href="companies.html">관심 기업</a>
+        <a href="future.html">관심 기업</a>
     </nav>
 </header>
 
 <div class="main">
-    <h1>제가 관심 있는 기술 분야입니다.</h1>
-    <section>
-        <h2>1. 프로그래밍 언어</h2>
-        <ul>
-            <li>Java (Spring Boot) - 백엔드 개발 주력 언어</li>
-            <li>Python - 데이터 전처리 및 AI 모델링 경험</li>
-            <li>JavaScript / HTML / CSS - 웹 프론트 이해</li>
-        </ul>
+    <h1>관심 있는 기술</h1>
 
-        <h2>2. 프레임워크 & 라이브러리</h2>
-        <ul>
-            <li>Spring Boot - REST API 개발</li>
-            <li>JPA / MyBatis - ORM 및 쿼리 매핑</li>
-            <li>React.js (기초) - 프론트엔드 연계 경험</li>
-        </ul>
+    <div class="company">
+        <h2>1. Java & Spring Framework</h2>
+        <p>백엔드 개발의 핵심 기술로써 안정성과 확장성이 뛰어나며, 실무에서 가장 많이 활용되는 기술 스택입니다.</p>
+    </div>
 
-        <h2>3. 데이터베이스</h2>
-        <ul>
-            <li>MySQL / MariaDB - 실습 및 프로젝트 활용</li>
-            <li>MongoDB - NoSQL 기초 경험</li>
-        </ul>
+    <div class="company">
+        <h2>2. MySQL / JPA</h2>
+        <p>관계형 데이터베이스와 ORM 기술을 함께 활용하여 효율적인 데이터 처리 및 유지보수가 가능한 시스템을 구축할 수 있습니다.</p>
+    </div>
 
-        <h2>4. 기타 개발 역량</h2>
-        <ul>
-            <li>Git / GitHub - 팀 프로젝트 협업 경험</li>
-            <li>Postman - API 테스트</li>
-            <li>Figma - 간단한 UI 프로토타이핑</li>
-        </ul>
-
-        <h2>5. 인증 및 준비 중</h2>
-        <ul>
-            <li>SQLD 취득</li>
-            <li>ADsP 준비 중</li>
-            <li>PCCE, TOPCIT 준비 중</li>
-        </ul>
-    </section>
+    <div class="company">
+        <h2>3. Git & 협업</h2>
+        <p>GitHub 기반 버전 관리와 팀원 간 협업 능력을 중요하게 생각합니다. 실전 프로젝트에서 Pull Request 기반 협업 경험 다수.</p>
+    </div>
 </div>
 
 <footer>
