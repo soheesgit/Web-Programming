@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문소희 - 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons-web@latest/dist/umd/lucide-icons-web.min.js">
+  <script src="https://cdn.jsdelivr.net/npm/lucide-icons-web@latest/dist/umd/lucide-icons-web.min.js"></script>
+  <style>
+    :root {
+      --pink-50: #fdf2f8;
+      --pink-100: #fce7f3;
+      --pink-200: #fbcfe8;
+      --pink-300: #f9a8d4;
+      --pink-400: #f472b6;
+      --pink-500: #ec4899;
+      --pink-600: #db2777;
+      --pink-700: #be185d;
+      --pink-800: #9d174d;
+      --pink-900: #831843;
+      --pink-950: #500724;
+
+      --purple-50: #faf5ff;
+      --purple-100: #f3e8ff;
+      --purple-200: #e9d5ff;
+      --purple-300: #d8b4fe;
+      --purple-400: #c084fc;
+      --purple-500: #a855f7;
+      --purple-600: #9333ea;
+      --purple-700: #7e22ce;
+      --purple-800: #6b21a8;
+      --purple-900: #581c87;
+      --purple-950: #3b0764;
+
+      --blue-50: #eff6ff;
+      --blue-100: #dbeafe;
+      --blue-200: #bfdbfe;
+      --blue-300: #93c5fd;
+      --blue-400: #60a5fa;
+      --blue-500: #3b82f6;
+
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+
+      --white: #ffffff;
+      --black: #000000;
+
+      --radius: 0.5rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--pink-100);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem;
+    }
+
+    .navbar-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--pink-500), var(--purple-500));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+
+    .navbar-menu {
+      display: none;
+    }
+
+    .navbar-menu.active {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--white);
+      z-index: 40;
+      padding-top: 5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .navbar-menu a {
+      padding: 1rem 0.75rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .navbar-menu a:hover {
+      color: var(--pink-500);
+    }
+
+    .navbar-desktop {
+      display: none;
+    }
+
+    .navbar-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border-radius: 0.375rem;
+      color: var(--gray-600);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar-toggle:hover {
+      color: var(--pink-500);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--pink-500);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--pink-600);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 5rem 1rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.1;
+    }
+
+    .hero-bg-circle-1 {
+      position: absolute;
+      top: 5rem;
+      left: 2.5rem;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background-color: var(--pink-300);
+    }
+
+    .hero-bg-circle-2 {
+      position: absolute;
+      top: 10rem;
+      right: 5rem;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      background-color: var(--purple-300);
+    }
+
+    .hero-bg-circle-3 {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 33%;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background-color: var(--blue-200);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .hero-text {
+      width: 100%;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--pink-600);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      color: var(--purple-600);
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-contact {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--gray-600);
+    }
+
+    .hero-contact-item i {
+      color: var(--pink-500);
+    }
+
+    .hero-image {
+      position: relative;
+      width: 16rem;
+      height: 16rem;
+    }
+
+    .hero-image-bg {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(to right, var(--pink-200), var(--purple-200));
+      animation: pulse 2s infinite;
+    }
+
+    .hero-image-container {
+      position: absolute;
+      inset: 0.5rem;
+      border-radius: 50%;
+      background-color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 4rem 1rem;
+    }
+
+    .section-white {
+      background-color: var(--white);
+    }
+
+    .section-pink {
+      background-color: var(--pink-50);
+    }
+
+    .section-purple {
+      background-color: var(--purple-50);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--gray-600);
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    /* Card Styles */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .card {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      background-color: var(--white);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-pink {
+      border-color: var(--pink-100);
+    }
+
+    .card-purple {
+      border-color: var(--purple-100);
+    }
+
+    .card-blue {
+      border-color: var(--blue-100);
+    }
+
+    .card-header {
+      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    }
+
+    .card-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .card-icon-pink {
+      background-color: var(--pink-100);
+    }
+
+    .card-icon-pink i {
+      color: var(--pink-500);
+    }
+
+    .card-icon-purple {
+      background-color: var(--purple-100);
+    }
+
+    .card-icon-purple i {
+      color: var(--purple-500);
+    }
+
+    .card-icon-blue {
+      background-color: var(--blue-100);
+    }
+
+    .card-icon-blue i {
+      color: var(--blue-500);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-title-pink {
+      color: var(--pink-600);
+    }
+
+    .card-title-purple {
+      color: var(--purple-600);
+    }
+
+    .card-title-blue {
+      color: var(--blue-600);
+    }
+
+    .card-description {
+      color: var(--gray-500);
+      font-size: 0.875rem;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      color: var(--gray-600);
+    }
+
+    /* Skills Section */
+    .skills-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .skills-card {
+      background-color: var(--white);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .skills-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--pink-600);
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .skill-level {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+    }
+
+    .progress {
+      height: 0.5rem;
+      background-color: var(--pink-100);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: var(--pink-500);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      padding: 0.25rem 0.75rem;
+      background-color: var(--pink-100);
+      color: var(--pink-600);
+      border-radius: 9999px;
+      font-size: 0.875rem;
+    }
+
+    .interest-item {
+      border-bottom: 1px solid var(--gray-100);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .interest-title {
+      font-weight: 500;
+      color: var(--gray-800);
+    }
+
+    .interest-description {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+
+    .interest-link {
+      font-size: 0.875rem;
+      color: var(--pink-500);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 0.25rem;
+    }
+
+    .interest-link:hover {
+      color: var(--pink-600);
+    }
+
+    /* Technical Challenges */
+    .challenge-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .challenge-icon {
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+
+    .challenge-icon-red {
+      color: #ef4444;
+    }
+
+    .challenge-icon-green {
+      color: #10b981;
+    }
+
+    .challenge-icon-blue {
+      color: var(--blue-500);
+    }
+
+    .challenge-title {
+      font-weight: 500;
+      color: var(--gray-800);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Social Issue */
+    .social-issue-card {
+      background-color: var(--white);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      max-width: 64rem;
+      margin: 0 auto;
+    }
+
+    .social-issue-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-issue-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--purple-600);
+    }
+
+    .social-issue-summary {
+      background-color: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-issue-summary-title {
+      font-weight: 500;
+      color: var(--gray-800);
+      margin-bottom: 0.5rem;
+    }
+
+    .social-issue-summary-text {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+
+    .social-issue-content {
+      color: var(--gray-600);
+    }
+
+    .social-issue-content p {
+      margin-bottom: 1rem;
+    }
+
+    /* Future Plans */
+    .future-plans-current {
+      background-color: var(--pink-50);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .future-plans-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .future-plans-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--pink-600);
+    }
+
+    .future-plans-content {
+      padding-left: 2.25rem;
+    }
+
+    .future-plans-project-title {
+      font-weight: 500;
+      color: var(--gray-800);
+    }
+
+    .future-plans-project-date {
+      color: var(--gray-600);
+      margin-top: 0.25rem;
+    }
+
+    .future-plans-project-description {
+      color: var(--gray-600);
+      margin-top: 0.5rem;
+    }
+
+    .tabs {
+      width: 100%;
+    }
+
+    .tabs-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 2rem;
+    }
+
+    .tab-trigger {
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: 500;
+      background-color: var(--gray-100);
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .tab-trigger:first-child {
+      border-top-left-radius: var(--radius);
+      border-bottom-left-radius: var(--radius);
+    }
+
+    .tab-trigger:last-child {
+      border-top-right-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+    }
+
+    .tab-trigger.active {
+      background-color: var(--pink-500);
+      color: var(--white);
+    }
+
+    .tab-content {
+      display: none;
+      background-color: var(--white);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Timeline */
+    .timeline-item {
+      position: relative;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .timeline-marker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .timeline-dot {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: var(--pink-500);
+      z-index: 10;
+    }
+
+    .timeline-line {
+      width: 0.125rem;
+      height: 100%;
+      background-color: var(--pink-200);
+    }
+
+    .timeline-content {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+    }
+
+    .timeline-date {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--pink-500);
+    }
+
+    .timeline-title {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--gray-800);
+      margin-top: 0.25rem;
+    }
+
+    .timeline-description {
+      color: var(--gray-600);
+      margin-top: 0.5rem;
+    }
+
+    .timeline-item:last-child .timeline-content {
+      padding-bottom: 0;
+    }
+
+    .timeline-item:last-child .timeline-line {
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--gray-900);
+      color: var(--white);
+      padding: 3rem 1rem;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--pink-400), var(--purple-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .footer-subtitle {
+      color: var(--gray-400);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-social-link {
+      color: var(--gray-400);
+      transition: color 0.2s;
+    }
+
+    .footer-social-link:hover {
+      color: var(--pink-400);
+    }
+
+    .footer-copyright {
+      color: var(--gray-500);
+      font-size: 0.875rem;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Media Queries */
+    @media (min-width: 768px) {
+      .navbar-desktop {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .navbar-desktop a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray-600);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .navbar-desktop a:hover {
+        color: var(--pink-500);
+      }
+
+      .navbar-toggle {
+        display: none;
+      }
+
+      .hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .hero-text {
+        width: 50%;
+      }
+
+      .hero-image {
+        width: 20rem;
+        height: 20rem;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container navbar-container">
+    <a href="#" class="navbar-logo">Sohee</a>
+
+    <div class="navbar-desktop">
+      <a href="#about">소개</a>
+      <a href="#skills">역량</a>
+      <a href="#challenges">기술적 도전</a>
+      <a href="#social-issue">사회 이슈</a>
+      <a href="#future-plans">미래 계획</a>
+      <a href="#" class="btn btn-primary">연락하기</a>
+    </div>
+
+    <button class="navbar-toggle" id="navbar-toggle">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="navbar-menu" id="navbar-menu">
+  <a href="#about" onclick="closeMenu()">소개</a>
+  <a href="#skills" onclick="closeMenu()">역량</a>
+  <a href="#challenges" onclick="closeMenu()">기술적 도전</a>
+  <a href="#social-issue" onclick="closeMenu()">사회 이슈</a>
+  <a href="#future-plans" onclick="closeMenu()">미래 계획</a>
+  <div style="padding-top: 1.5rem;">
+    <a href="#" class="btn btn-primary" style="width: 100%;">연락하기</a>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-circle-1"></div>
+    <div class="hero-bg-circle-2"></div>
+    <div class="hero-bg-circle-3"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          안녕하세요! <br>
+          <span>문소희</span>입니다
+        </h1>
+        <p class="hero-subtitle">소프트웨어학과 3학년 | 백엔드 개발자 지망생</p>
+        <div class="hero-contact">
+          <div class="hero-contact-item">
+            <i data-lucide="map-pin" width="16" height="16"></i>
+            <span>대한민국</span>
+          </div>
+          <div class="hero-contact-item">
+            <i data-lucide="mail" width="16" height="16"></i>
+            <span>sohee@example.com</span>
+          </div>
+          <div class="hero-contact-item">
+            <i data-lucide="github" width="16" height="16"></i>
+            <span>github.com/sohee</span>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary">
+          이력서 다운로드
+          <i data-lucide="arrow-right" width="16" height="16" style="margin-left: 0.5rem;"></i>
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-image-bg"></div>
+        <div class="hero-image-container">
+          <img src="https://via.placeholder.com/300" alt="문소희">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">본인소개</h2>
+      <p class="section-subtitle">소프트웨어학과 3학년 문소희에 대하여</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-pink">
+        <div class="card-header">
+          <div class="card-icon card-icon-pink">
+            <i data-lucide="heart" width="24" height="24"></i>
+          </div>
+          <h3 class="card-title card-title-pink">주제 선정 동기</h3>
+          <p class="card-description">나의 꿈과 목표</p>
+        </div>
+        <div class="card-content">
+          <p>
+            저는 백엔드 개발자가 되고 싶습니다. 사용자들이 보지 못하는 곳에서 안정적이고 효율적인 시스템을 구축하는
+            것에 큰 매력을 느끼고 있습니다. 제 인생의 목표는 네이버에 취업하여 대규모 서비스의 백엔드 시스템을
+            개발하고 유지보수하는 것입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-purple">
+        <div class="card-header">
+          <div class="card-icon card-icon-purple">
+            <i data-lucide="book-open" width="24" height="24"></i>
+          </div>
+          <h3 class="card-title card-title-purple">역량 성장 과정</h3>
+          <p class="card-description">나의 개발 여정</p>
+        </div>
+        <div class="card-content">
+          <p>
+            소프트웨어학과에 오게 된 이유는, 그저 게임과 컴퓨터를 좋아해서 왔습니다. 공부를 하면 30분 공부하는 것도
+            힘들지만, 컴퓨터에서 생긴 문제를 해결하고 컴퓨터를 만지는 일은 3시간을 해도 재미있다고 느껴졌습니다.
+            <br><br>
+            printf()도 모르는 채로 소프트웨어학과에 입학했지만, 처음 배운 C언어는 즐거웠습니다. 내가 주어진 대로
+            코드가 실행되고, 내가 변경하는 대로 변경되고... 제가 원하는 대로 만들 수 있다는 점이 신기했습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-blue">
+        <div class="card-header">
+          <div class="card-icon card-icon-blue">
+            <i data-lucide="target" width="24" height="24"></i>
+          </div>
+          <h3 class="card-title card-title-blue">가치관과 직업관</h3>
+          <p class="card-description">나의 생각</p>
+        </div>
+        <div class="card-content">
+          <p>
+            제가 가진 직업관은 '기술은 도구일 뿐이며, 그 도구를 어떻게 활용하느냐에 따라 인간의 가치는 오히려 더욱
+            커질 수 있다'는 믿음에서 출발합니다.
+            <br><br>
+            앞으로 저는 개발자로서 단순히 코딩을 잘하는 것을 넘어, 기술을 윤리적이고 인간 친화적으로 설계할 수 있는
+            사람이 되고 싶습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section section-pink">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">본인 역량</h2>
+      <p class="section-subtitle">제가 가진 기술적 역량과 관심 분야에 대해 소개합니다</p>
+    </div>
+
+    <div class="skills-container">
+      <div class="skills-card">
+        <h3 class="skills-title">기술 스택</h3>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <div class="skill-name">
+              <i data-lucide="code" width="20" height="20" style="color: var(--pink-500);"></i>
+              <span>Java</span>
+            </div>
+            <span class="skill-level">75%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <div class="skill-name">
+              <i data-lucide="server" width="20" height="20" style="color: var(--pink-500);"></i>
+              <span>Spring Boot</span>
+            </div>
+            <span class="skill-level">65%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 65%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <div class="skill-name">
+              <i data-lucide="database" width="20" height="20" style="color: var(--pink-500);"></i>
+              <span>SQL</span>
+            </div>
+            <span class="skill-level">70%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 70%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <div class="skill-name">
+              <i data-lucide="code" width="20" height="20" style="color: var(--pink-500);"></i>
+              <span>C/C++</span>
+            </div>
+            <span class="skill-level">80%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <div class="skill-name">
+              <i data-lucide="zap" width="20" height="20" style="color: var(--pink-500);"></i>
+              <span>알고리즘</span>
+            </div>
+            <span class="skill-level">60%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-card">
+        <h3 class="skills-title">관심 기술 및 기업</h3>
+
+        <div style="margin-bottom: 1rem;">
+          <h4 style="font-size: 1.125rem; font-weight: 500; color: var(--gray-800); margin-bottom: 0.5rem;">관심 기술</h4>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">JPA</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.125rem; font-weight: 500; color: var(--gray-800); margin-bottom: 0.5rem;">관심 기업</h4>
+
+          <div class="interest-item">
+            <h5 class="interest-title">네이버</h5>
+            <p class="interest-description">네이버 2025 공채</p>
+            <a href="https://recruit.navercorp.com/micro/teamnaver/2025" target="_blank" class="interest-link">
+              자세히 보기
+              <i data-lucide="arrow-right" width="12" height="12" style="margin-left: 0.25rem;"></i>
+            </a>
+          </div>
+
+          <div class="interest-item">
+            <h5 class="interest-title">중견기업</h5>
+            <p class="interest-description">백엔드 개발자 포지션</p>
+            <a href="#" class="interest-link">
+              자세히 보기
+              <i data-lucide="arrow-right" width="12" height="12" style="margin-left: 0.25rem;"></i>
+            </a>
+          </div>
+
+          <div class="interest-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+            <h5 class="interest-title">중소기업</h5>
+            <p class="interest-description">스타트업 환경에서의 경험</p>
+            <a href="#" class="interest-link">
+              자세히 보기
+              <i data-lucide="arrow-right" width="12" height="12" style="margin-left: 0.25rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-card" style="margin-top: 3rem;">
+      <h3 class="skills-title">본인 역량에 대한 자유로운 기술</h3>
+      <div style="color: var(--gray-600);">
+        <p style="margin-bottom: 1rem;">
+          저는 문제 해결 능력과 끈기를 가장 큰 강점으로 생각합니다. 어려운 문제를 만났을 때 포기하지 않고 다양한
+          방법으로 접근하여 해결책을 찾아내는 것을 좋아합니다. 이러한 성향은 프로그래밍을 할 때 특히 큰 도움이
+          됩니다.
+        </p>
+        <p style="margin-bottom: 1rem;">
+          또한 새로운 기술을 배우는 것에 대한 열정이 있습니다. 기술 트렌드를 꾸준히 따라가며 필요한 기술을 습득하는
+          데 주저하지 않습니다. 최근에는 Spring Boot와 JPA를 중점적으로 학습하고 있으며, 이를 활용한 프로젝트를
+          진행하고 있습니다.
+        </p>
+        <p>
+          팀 프로젝트에서는 소통과 협업을 중요시합니다. 명확한 의사소통을 통해 팀원들과 효율적으로 협업하며, 필요할
+          때는 리더십을 발휘하여 프로젝트를 성공적으로 이끌어 나갑니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technical Challenges Section -->
+<section id="challenges" class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">기술적 도전</h2>
+      <p class="section-subtitle">프로젝트 중 어려웠던 부분과 해결 방안</p>
+    </div>
+
+    <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="card card-pink">
+        <div class="card-header">
+          <div class="card-icon card-icon-pink">
+            <i data-lucide="database" width="24" height="24"></i>
+          </div>
+          <h3 class="card-title card-title-pink">데이터베이스 연동 문제</h3>
+          <p class="card-description">프로젝트 진행 중 발생한 DB 연동 이슈</p>
+        </div>
+        <div class="card-content">
+          <div class="challenge-item">
+            <i data-lucide="alert-circle" width="20" height="20" class="challenge-icon challenge-icon-red"></i>
+            <div>
+              <h4 class="challenge-title">문제 상황</h4>
+              <p>
+                팀 프로젝트에서 Spring Boot 애플리케이션과 MySQL 데이터베이스를 연동하는 과정에서 JPA 엔티티 매핑
+                오류가 발생했습니다. 특히 다대다 관계를 설정하는 과정에서 무한 루프 참조 문제가 발생하여 API
+                응답이 제대로 반환되지 않았습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+            <i data-lucide="check-circle-2" width="20" height="20" class="challenge-icon challenge-icon-green"></i>
+            <div>
+              <h4 class="challenge-title">해결 방안</h4>
+              <p>
+                1. 엔티티 클래스에 @JsonManagedReference와 @JsonBackReference 어노테이션을 적용하여 직렬화
+                과정에서의 순환 참조를 해결했습니다.
+                <br>
+                2. 다대다 관계를 중간 테이블을 이용한 일대다, 다대일 관계로 재설계했습니다.
+                <br>
+                3. DTO 패턴을 도입하여 엔티티와 API 응답을 분리함으로써 필요한 데이터만 클라이언트에 전달하도록
+                개선했습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+            <i data-lucide="server" width="20" height="20" class="challenge-icon challenge-icon-blue"></i>
+            <div>
+              <h4 class="challenge-title">배운 점</h4>
+              <p>
+                이 문제를 해결하면서 JPA의 엔티티 관계 설계의 중요성과 API 응답 설계 시 고려해야 할 사항들에 대해
+                깊이 이해하게 되었습니다. 또한 문제 해결을 위해 다양한 자료를 찾아보고 팀원들과 함께 고민하는
+                과정에서 협업의 중요성도 다시 한번 느낄 수 있었습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-purple">
+        <div class="card-header">
+          <div class="card-icon card-icon-purple">
+            <i data-lucide="server" width="24" height="24"></i>
+          </div>
+          <h3 class="card-title card-title-purple">서버 성능 최적화 도전</h3>
+          <p class="card-description">대용량 데이터 처리 시 발생한 성능 이슈</p>
+        </div>
+        <div class="card-content">
+          <div class="challenge-item">
+            <i data-lucide="alert-circle" width="20" height="20" class="challenge-icon challenge-icon-red"></i>
+            <div>
+              <h4 class="challenge-title">문제 상황</h4>
+              <p>
+                사용자 데이터가 증가함에 따라 특정 API 엔드포인트의 응답 시간이 크게 늘어나는 문제가 발생했습니다.
+                특히 여러 테이블을 조인하여 데이터를 조회하는 API에서 성능 저하가 두드러졌습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+            <i data-lucide="check-circle-2" width="20" height="20" class="challenge-icon challenge-icon-green"></i>
+            <div>
+              <h4 class="challenge-title">해결 방안</h4>
+              <p>
+                1. 데이터베이스 인덱스를 적절히 추가하여 쿼리 성능을 개선했습니다.
+                <br>
+                2. N+1 문제를 해결하기 위해 JPA의 fetch join을 활용했습니다.
+                <br>
+                3. 자주 조회되는 데이터에 대해 Redis 캐싱을 도입하여 데이터베이스 부하를 줄였습니다.
+                <br>
+                4. 페이지네이션을 적용하여 한 번에 처리하는 데이터의 양을 제한했습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="challenge-item">
+            <i data-lucide="server" width="20" height="20" class="challenge-icon challenge-icon-blue"></i>
+            <div>
+              <h4 class="challenge-title">배운 점</h4>
+              <p>
+                이 경험을 통해 대용량 데이터 처리 시 성능 최적화의 중요성을 깨달았습니다. 단순히 기능이 작동하는
+                것을 넘어, 확장성과 성능을 고려한 설계의 필요성을 체감했습니다. 또한 문제 해결 과정에서 다양한
+                성능 최적화 기법들을 학습하고 적용해볼 수 있었던 값진 경험이었습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Issue Section -->
+<section id="social-issue" class="section section-purple">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">사회 이슈에 대한 견해</h2>
+      <p class="section-subtitle">
+        최근 사회 이슈 중 중요하다고 생각되는 한 가지를 선택하고 자신의 견해 기술
+      </p>
+    </div>
+
+    <div class="social-issue-card">
+      <div class="social-issue-header">
+        <i data-lucide="newspaper" width="24" height="24" style="color: var(--purple-500);"></i>
+        <h3 class="social-issue-title">AI가 대체 가능한 업무에 대한 채용 감소 이슈</h3>
+      </div>
+
+      <div class="social-issue-summary">
+        <h4 class="social-issue-summary-title">뉴스 기사 요약</h4>
+        <p class="social-issue-summary-text">
+          최근 '카카오가 AI가 대체 가능한 직무에 대해 채용을 줄이겠다'는 보도가 있었습니다. 비록 해당 기업은 이를
+          부인했지만, 이는 AI 기술의 발전으로 인한 일자리 변화에 대한 사회적 논의를 불러일으켰습니다. 국내 IT
+          기업들이 AI로 대체할 수 있는 신입·저숙련 개발자 고용을 줄이는 추세가 나타나고 있다는 내용이었습니다.
+        </p>
+      </div>
+
+      <div class="social-issue-content">
+        <p>
+          최근 'AI가 대체 가능한 직무에 대해 채용을 줄이겠다'는 보도를 접하며 깊은 고민을 하게 되었습니다. 비록
+          보도된 기업은 이를 부인했지만, 저는 기본적이고 반복적인 업무는 이미 AI에 의해 빠르게 대체되고 있다고
+          느꼈습니다. 실제로 자연어처리, 자동 코드 생성, 상담 챗봇 등 여러 기술들이 일상화되면서, '어떤 일을 사람이
+          해야 하는가'에 대한 기준이 급변하고 있다고 생각합니다.
+        </p>
+        <p>
+          저는 'AI가 모든 직무를 대체할 수 있다'는 주장에는 회의적입니다. 그러나 'AI로 인해 인간이 투입하는 시간이
+          줄어들면서, 조직이 필요한 인력을 줄여가는 것'은 충분히 납득 가능한 흐름이라 봅니다. 이는 비효율을 줄이기
+          위한 방향일 뿐, 인간의 가치를 무시하려는 것이 아니기 때문입니다.
+        </p>
+        <p>
+          하지만 동시에, AI의 발전 속도는 무서우리만치 빠르다는 사실도 절감합니다. 기술적 한계가 여전히 존재하지만,
+          앞으로 10년 안에 고도화된 AI가 더 많은 분야에서 사람의 자리를 위협할 수 있다는 생각에 경각심을 갖게
+          됩니다. 이런 흐름 속에서 저는 기술의 발전을 수용하는 동시에, 인간만의 경쟁력을 키우기 위해 끊임없이 배워야
+          한다고 느꼈습니다. 이러한 고민과 각성은 제가 기술을 대하는 태도에도 긍정적인 영향을 주고 있습니다.
+        </p>
+        <p>
+          제가 가진 직업관은 '기술은 도구일 뿐이며, 그 도구를 어떻게 활용하느냐에 따라 인간의 가치는 오히려 더욱
+          커질 수 있다'는 믿음에서 출발합니다. 최근 AI 기술이 빠르게 확산되면서 '사람이 필요 없는 시대'가 올 수
+          있다는 불안도 커지고 있지만, 저는 이러한 변화가 오히려 사람의 고유한 역량을 더 명확하게 드러내는 기회라고
+          생각합니다.
+        </p>
+        <p>
+          AI가 단순하고 반복적인 업무를 대신해주는 시대에는 창의력, 문제해결능력, 공감 능력 등 인간적인 요소들이 더
+          중요해집니다. 따라서 저는 기술을 익히는 데 그치지 않고, 기술의 작동 원리와 인간 중심의 적용 방법까지 함께
+          고민하려고 노력합니다.
+        </p>
+        <p>
+          앞으로 저는 개발자로서 단순히 코딩을 잘하는 것을 넘어, 기술을 윤리적이고 인간 친화적으로 설계할 수 있는
+          사람이 되고 싶습니다. AI가 기술적으로 완전해질수록, 그 기술이 인간 사회에 어떻게 연결되고 활용되는지가
+          더욱 중요한 이슈가 될 것이라 믿기 때문입니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Future Plans Section -->
+<section id="future-plans" class="section section-white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">미래 계획</h2>
+      <p class="section-subtitle">앞으로의 목표와 계획</p>
+    </div>
+
+    <div style="max-width: 64rem; margin: 0 auto;">
+      <div class="future-plans-current">
+        <div class="future-plans-header">
+          <i data-lucide="calendar" width="24" height="24" style="color: var(--pink-500);"></i>
+          <h3 class="future-plans-title">현재 진행 중인 프로젝트</h3>
+        </div>
+        <div class="future-plans-content">
+          <h4 class="future-plans-project-title">창업동아리: AI 기반 동네 추천 플랫폼</h4>
+          <p class="future-plans-project-date">기간: 2025/05/20 ~ 2026. 2. 28.</p>
+          <p class="future-plans-project-description">
+            백엔드 담당으로 NCF(Neural Collaborative Filtering)를 이용한 추천 시스템 구현 진행 중입니다. 사용자의
+            선호도와 행동 패턴을 분석하여 최적의 동네를 추천하는 알고리즘을 개발하고 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tabs-list">
+          <div class="tab-trigger active" data-tab="tab-2025">2025년 계획</div>
+          <div class="tab-trigger" data-tab="tab-2026">2026년 계획</div>
+        </div>
+
+        <div class="tab-content active" id="tab-2025">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">5월 - 6월</span>
+                <h4 class="timeline-title">창업동아리 활동 시작</h4>
+                <p class="timeline-description">AI 기반 동네 추천 플랫폼 개발 시작 (백엔드 담당으로 NCF를 이용한 추천 시스템 구현)</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">7월</span>
+                <h4 class="timeline-title">CS 지식 강화 및 자격증 준비</h4>
+                <p class="timeline-description">운영체제 공부, ADSP 및 SQLD 시험 접수, 토익 공부 시작</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">8월</span>
+                <h4 class="timeline-title">자격증 시험</h4>
+                <p class="timeline-description">8/9 ADSP 응시, 8/23 SQLD 응시, 토익 공부 지속</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">9월</span>
+                <h4 class="timeline-title">토익 시험</h4>
+                <p class="timeline-description">9/14 및 9/28 토익 시험 응시</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">10월 - 12월</span>
+                <h4 class="timeline-title">코딩 역량 강화</h4>
+                <p class="timeline-description">코딩테스트/자바/스프링부트 공부, 프로젝트를 틈틈히 하며 학업에 집중</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-2026">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">1월</span>
+                <h4 class="timeline-title">프로젝트 마무리 및 새 시작</h4>
+                <p class="timeline-description">AI 기반 동네 추천 플랫폼 마무리, 새로운 프로젝트 시작, 정보처리기사 필기시험 접수</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">2월</span>
+                <h4 class="timeline-title">정보처리기사 필기 시험</h4>
+                <p class="timeline-description">정보처리기사 필기 시험 응시</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">3월</span>
+                <h4 class="timeline-title">캡스톤 프로젝트 준비</h4>
+                <p class="timeline-description">졸업 작품을 위한 캡스톤 프로젝트 준비 시작</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">4월</span>
+                <h4 class="timeline-title">정보처리기사 실기 시험</h4>
+                <p class="timeline-description">정보처리기사 실기 시험 응시</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <span class="timeline-date">6월</span>
+                <h4 class="timeline-title">방학 인턴 준비</h4>
+                <p class="timeline-description">스타트업들을 대상으로 방학 대학생 인턴십 프로그램 지원 (https://groupby.kr/programs)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div>
+      <h2 class="footer-logo">문소희</h2>
+      <p class="footer-subtitle">소프트웨어학과 3학년 | 백엔드 개발자 지망생</p>
+    </div>
+
+    <div>
+      <div class="footer-social">
+        <a href="#" class="footer-social-link">
+          <i data-lucide="github" width="20" height="20"></i>
+          <span class="sr-only">Github</span>
+        </a>
+        <a href="#" class="footer-social-link">
+          <i data-lucide="linkedin" width="20" height="20"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="#" class="footer-social-link">
+          <i data-lucide="instagram" width="20" height="20"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="mailto:sohee@example.com" class="footer-social-link">
+          <i data-lucide="mail" width="20" height="20"></i>
+          <span class="sr-only">Email</span>
+        </a>
+      </div>
+      <p class="footer-copyright">© 2025 문소희. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Initialize Lucide icons
+  lucide.createIcons();
+
+  // Mobile menu toggle
+  const navbarToggle = document.getElementById('navbar-toggle');
+  const navbarMenu = document.getElementById('navbar-menu');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    navbarMenu.classList.toggle('active', isMenuOpen);
+
+    // Change icon
+    const icon = navbarToggle.querySelector('i');
+    if (isMenuOpen) {
+      icon.setAttribute('data-lucide', 'x');
+    } else {
+      icon.setAttribute('data-lucide', 'menu');
+    }
+    lucide.createIcons();
+  }
+
+  function closeMenu() {
+    isMenuOpen = false;
+    navbarMenu.classList.remove('active');
+    const icon = navbarToggle.querySelector('i');
+    icon.setAttribute('data-lucide', 'menu');
+    lucide.createIcons();
+  }
+
+  navbarToggle.addEventListener('click', toggleMenu);
+
+  // Tabs functionality
+  const tabTriggers = document.querySelectorAll('.tab-trigger');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      // Remove active class from all triggers and contents
+      tabTriggers.forEach(t => t.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      // Add active class to clicked trigger
+      trigger.classList.add('active');
+
+      // Show corresponding content
+      const tabId = trigger.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+
+      if (isMenuOpen) {
+        closeMenu();
+      }
+    });
+  });
+</script>
+</body>
+</html>

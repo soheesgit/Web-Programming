@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>눈 내리는 사걀의 마을</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .snowflake {
+      position: absolute;
+      color: white;
+      font-size: 50px;
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const snowCount = 40;       // 눈송이 개수
+  const swingRange = 25;      // 좌우 흔들림 폭을 더 키움
+  let sharedAngle = 0;        // 전체 눈송이 공통 각도
+  const snowflakes = [];
+
+  // 눈송이 초기화
+  for (let i = 0; i < snowCount; i++) {
+    const snow = document.createElement("div");
+    snow.className = "snowflake";
+    snow.innerText = "*";
+
+    const startX = Math.random() * window.innerWidth;
+    const startY = Math.random() * window.innerHeight;
+
+    snow.style.left = startX + "px";
+    snow.style.top = startY + "px";
+    document.body.appendChild(snow);
+
+    snowflakes.push({
+      el: snow,
+      baseX: startX,
+      y: startY,
+      speedY: 1 + Math.random() * 2
+    });
+  }
+
+  function animateSnow() {
+    sharedAngle += 0.03; // 흔들림 속도
+
+    for (let flake of snowflakes) {
+      flake.y += flake.speedY;
+
+      const offsetX = Math.sin(sharedAngle) * swingRange;
+      const x = flake.baseX + offsetX;
+
+      flake.el.style.top = flake.y + "px";
+      flake.el.style.left = x + "px";
+
+      if (flake.y > window.innerHeight) {
+        flake.y = -20;
+        flake.baseX = Math.random() * window.innerWidth;
+      }
+    }
+
+    requestAnimationFrame(animateSnow);
+  }
+
+  animateSnow();
+</script>
+
+</body>
+</html>

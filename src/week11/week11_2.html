@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout)_/clearTimeout()</title>
+    <style>
+        #clock{
+            border: 1px solid black;
+            background-color: #e0f1f8;
+            width: 110px;
+        }
+    </style>
+    <script>
+        function startClock(){
+            var clock = document.getElementById("clock");
+            timeout(clock);
+        }
+
+        function timeout(obj){
+            var current = new Date();
+            obj.innerHTML = current.toLocaleTimeString()
+            setTimeout("timeout(clock)", 1000);
+            timeout()
+        }
+    </script>
+</head>
+<body onload="startClock()">
+<h3>div 태그에 시계 만들기</h3>
+<hr>
+<div id ="clock"></div>
+</body>
+</html>
