@@ -2,113 +2,531 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>문소희 | 자기소개</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background-color: #f5f5f7;
-      color: #1d1d1f;
-      padding: 0;
-      margin: 0;
-    }
-
-    header {
-      background-color: #ffffff;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: #1d1d1f;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #0071e3;
-    }
-
-    .main {
-      padding: 80px 60px;
-    }
-
-    h1 {
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    section {
-      max-width: 900px;
-      line-height: 1.7;
-    }
-
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-size: 22px;
-      color: #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #aaa;
-      font-size: 14px;
-      border-top: 1px solid #eee;
-      margin-top: 60px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문소희 포트폴리오</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
+<!-- Navigation Bar -->
+<header class="navbar">
+  <div class="container">
+    <div class="navbar-content">
+      <a href="index.html" class="logo">문소희 포트폴리오</a>
 
-<header>
-  <div><strong>문소희</strong></div>
-  <nav>
-    <a href="index.html">본인 소개</a>
-    <a href="skills.html">관심 기술</a>
-    <a href="companies.html">관심 기업</a>
-  </nav>
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link active">본인 소개</a>
+        <a href="tech.html" class="nav-link">관심 기술 및 기업</a>
+        <a href="future.html" class="nav-link">Future Plan</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+      <a href="index.html" class="nav-link active">본인 소개</a>
+      <a href="tech.html" class="nav-link">관심 기술 및 기업</a>
+      <a href="future.html" class="nav-link">Future Plan</a>
+    </nav>
+  </div>
 </header>
 
-<div class="main">
-  <h1>안녕하세요, 문소희입니다.</h1>
-  <section>
-    <h2>주제 선정 동기와 이루고 싶은 목표</h2>
-    <p>제가 이 웹페이지를 만든 이유는 제 진로를 명확히 정리하고, 제 자신을 돌아보며 진지하게 취업을 준비하기 위해서입니다.</p>
+<main class="main-content">
+  <div class="container">
+    <!-- Quick Navigation -->
+    <div class="quick-nav">
+      <button class="quick-nav-btn" data-target="intro">본인소개</button>
+      <button class="quick-nav-btn" data-target="growth">역량 성장 과정</button>
+      <button class="quick-nav-btn" data-target="issue">사회 이슈 견해</button>
+      <button class="quick-nav-btn" data-target="project">프로젝트</button>
+      <button class="quick-nav-btn" data-target="skills">역량</button>
+    </div>
 
-    <h2>역량 성장 과정</h2>
-    <p>2학년 여름방학 때 참여한 공공데이터 공모전이 제 인생을 바꾼 계기였습니다. 처음으로 데이터를 수집하고, 정제하고, AI모델까지 학습시켜보며 백엔드 개발자로서의 길을 걷고자 결심했습니다.</p>
+    <!-- Introduction Section -->
+    <section id="intro" class="section fade-in">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title gradient-text-purple">본인소개</h2>
+        </div>
+        <div class="card-content">
+          <div class="profile-container">
+            <div class="profile-image">
+              <img src="https://via.placeholder.com/256" alt="프로필 이미지">
+            </div>
+            <div class="profile-info">
+              <h2 class="profile-name">안녕하세요, 백엔드 개발자 문소희입니다.</h2>
+              <div class="profile-links">
+                <div class="profile-link">
+                  <i data-feather="github"></i>
+                  <a href="https://github.com/soheesgit" target="_blank">github.com/soheesgit</a>
+                </div>
+                <div class="profile-link">
+                  <i data-feather="external-link"></i>
+                  <a href="https://thgml89567.tistory.com/" target="_blank">thgml89567.tistory.com</a>
+                </div>
+                <div class="profile-link">
+                  <i data-feather="mail"></i>
+                  <a href="mailto:thgml89567@naver.com">thgml89567@naver.com</a>
+                </div>
+                <div class="profile-link">
+                  <i data-feather="phone"></i>
+                  <a href="tel:01077248716">010-7724-8716</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>최근 사회 이슈에 대한 견해</h2>
-    <p>생성형 AI의 급속한 발전은 개발자의 역할을 다시 고민하게 만들고 있습니다. 단순 구현보다 더 본질적인 문제 해결 능력과 창의성이 중요하다고 생각합니다.</p>
+    <!-- Growth Process Section -->
+    <section id="growth" class="section fade-in">
+      <div class="card">
+        <div class="card-header blue-gradient">
+          <h2 class="card-title gradient-text-blue">본인 역량 성장 과정</h2>
+        </div>
+        <div class="card-content">
+          <div class="timeline">
+            <div class="timeline-item blue">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title">~2023</h3>
+              <p class="timeline-content">
+                처음부터 개발자를 꿈꾼 것은 아니였습니다. 저는 어렸을 때부터 게임과 컴퓨터를 좋아했지만, 그것이 직업으로 이어질 줄 몰랐습니다. 하지만 제가 시간이 가는 줄 모를 정도로 몰입할 수 있는 일은 컴퓨터를 다루는 일이었습니다. 반대로 공부는 30분만 해도 지루하고 집중력이 떨어지고는 했습니다. 진로를 고민할 때, 컴퓨터를 많이 하는 건 자신이 있다는 이유로 소프트웨어학과를 선택하게 되었습니다. 소프트웨어학과에 대한 이해도가 크지 않은 채로 학교에 진학하게 되었습니다.
+              </p>
+            </div>
 
-    <h2>기술적으로 가장 어려웠던 프로젝트</h2>
-    <p>2024년 참여한 교내 프로젝트에서 Spring Boot와 MySQL을 연동해 RESTful API를 만드는 작업이 가장 도전적이었습니다. DB연결 오류 해결과 Git 협업 충돌 경험을 통해 실무 역량을 쌓을 수 있었습니다.</p>
+            <div class="timeline-item purple">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title">2023</h3>
+              <p class="timeline-content">
+                대학 입학 전에는 특별한 코딩 경험이 없었습니다. 첫 프로그래밍 언어로 접한 C언어는 낯설었습니다. 맨 처음에 "Hello, World!"를 출력하기까지 1시간이 걸렸습니다. 하지만 그러한 과정에서도 즐거움을 느꼈습니다. 내 생각을 프로그래밍으로 구현하는 과정에서 큰 매력으로 다가왔습니다. 문법을 계속해서 공부하며 자료구조를 이해할수록 더욱 더 재밌게 느껴졌습니다. 특히 매주 백준 문제를 풀던 멘토링 시간을 통해, 문제를 내 힘으로 해결해나가는 성취감을 알게 되었습니다. 문제를 마주할 때 여러 번 시도해보고, 구글링하고, 결국 원하는 결과를 끌어낼 수 있을 때의 성취감은 지금 제가 개발자로 성장하고자 하는 마음의 출발점이 되었습니다.
+              </p>
+            </div>
 
-    <h2>자유 기술: 내 역량</h2>
-    <p>저는 문제 해결을 좋아하고, 배운 것을 바로 실습하며 빠르게 성장하는 타입입니다. 협업과 문서화 능력을 바탕으로 실력 있는 백엔드 개발자가 되고 싶습니다.</p>
-  </section>
-</div>
+            <div class="timeline-item pink">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title">2024</h3>
+              <p class="timeline-content">
+                2학년 때 Java와 함께 객체지향 프로그래밍을 배우며, 개발에 대해 더 깊이 있게 생각하게 되었습니다. 평소에는 하나의 파일에 쭉 작성하는 과정의 코딩만 해왔었는데, 변경에도 유연한 구조를 직접 만드는 게 신기했습니다. 단순히 코드를 짜는 것을 넘어서 논리적으로 설계된 구조 안에서 기능이 유기적으로 작동하는 과정이 매력적으로 다가왔습니다. 어떻게 하면 더 유연하고 효율적으로 해결할 수 있을지 생각하는 것은 너무 어려웠지만, 해결할 때의 성취감은 더 크게 다가왔습니다. 이때부터 본격적으로 개발자가 되고 싶다는 확신이 생겼습니다.
+              </p>
+              <p class="timeline-content">
+                그 후 프론트엔드와 백엔드 중에 어느 길을 선택할지에 대해 고민이 있었습니다. 2학년 때 자바 프로그래밍 II를 수강하며, 팀 프로젝트에서 프론트엔드를 맡게 되었습니다. 하지만 평소에 미적 감각이 전혀 없던 저는, 수많은 레퍼런스를 참고하고도 원하는 느낌을 구현하기 어려웠습니다. 섬세한 시각적 표현에 자신이 없는 저는 프론트엔드는 제 길이 아님을 느껴 백엔드를 선택하였습니다.
+              </p>
+              <p class="timeline-content">
+                이후에 백엔드 공부에 집중하기로 결심하였습니다. 웹페이지가 어떻게 구성되는지도 전혀 모른채로 Spring Boot 강의를 듣기 시작했습니다. 그 과정에서 원하는 기능을 하나씩 검색하고, 코드를 따라서 입력해보고, 직접 수정하면서 작동 방식을 이해해나가는 과정 자체에서 재미를 느꼈습니다. 수많은 오류를 마주하면 당황스럽지만, 해결해가며 성취감을 느꼈습니다. '매일 사용하는 인터넷이 이렇게 작동하구나' 하는 깨달음도 새로웠습니다.
+              </p>
+            </div>
 
-<footer>
-  &copy; 2025 문소희. All rights reserved.
-</footer>
+            <div class="timeline-item green">
+              <div class="timeline-marker"></div>
+              <h3 class="timeline-title">2025 ~</h3>
+              <p class="timeline-content">
+                현재는 Spring Boot를 중심으로 백엔드 기술을 더 깊이 익히기 위해 다양한 실습과 미니 프로젝트를 수행하는 중입니다. 또한 틈틈히 알고리즘 문제를 풀며 사고력을 기르고 있습니다. 단순히 코드를 구현하는 수준에 머무르지 않고, 서비스 전체의 흐름과 구조를 이해하며 유지보수와 확장까지 고려한 설계 역량을 키우는 것을 목표로 학습하고 있습니다. 앞으로는 대규모 사용자에게 안정적인 서비스를 제공하는 백엔드 개발자가 되기 위해, 효율적인 데이터 처리, 시스템 안정성, 협업 중심 개발 프로세스에 대한 이해를 지속적으로 확장해갈 계획입니다. 기술의 흐름을 따라가는 데 그치지 않고, 사용자 경험을 중심에 두고 고민하는 개발자로 성장하고 싶습니다. 장기적으로는 수백만 명이 사용하는 서비스를 설계하고 운영하는 기업에서, 기술을 기반으로 실질적인 가치를 전달하는 개발자가 되는 것이 제 목표입니다. 그 방향성과 문화, 기술 깊이 면에서 저는 네이버와 같은 환경이 제 비전과 가장 잘 맞는다고 생각합니다.
+              </p>
+              <div class="more-link">
+                <a href="tech.html" class="btn btn-outline">
+                  관심 기술 및 기업 자세히 보기
+                  <i data-feather="external-link" class="btn-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Social Issue Section -->
+    <section id="issue" class="section fade-in">
+      <div class="card">
+        <div class="card-header amber-gradient">
+          <h2 class="card-title gradient-text-amber">최근 사회 이슈에 대한 견해</h2>
+        </div>
+        <div class="card-content">
+          <div class="news-container">
+            <!-- 뉴스 기사 -->
+            <div class="news-article">
+              <div class="news-header">
+                <h3 class="news-title">신규채용 대신 AI로 카카오의 인사 혁신</h3>
+                <span class="news-date">2025.05.17</span>
+              </div>
+              <div class="news-content">
+                <p class="news-highlight">AI가 대체가능한 업무에 사람 안뽑고 자리도 없애 고용 불안 현실화 우려</p>
+                <p>
+                  카카오가 코딩 등 인공지능(AI)이 대신할 수 있는 직무는 신규 채용을 제한하기로 했다. 생성형 AI가 업무 생산성 향상에 활용되는 것에서 나아가 사람 자체를 대체하는 'AI발 일자리 충격'이 현실화하고 있다.
+                </p>
+                <p>
+                  17일 카카오 복수의 내부 관계자들에 따르면 카카오는 이달 초 인력 운용 관련 설명자료를 사내 게시판에 게재했다. 소프트웨어 개발 등 현업에서 AI를 접목해 효율성을 높이자는 것이 주된 내용으로, 신입 개발자 대신 AI가 할 수 있는 업무들을 열거하고 실제로 AI로 인력을 대체하고 있는 업계 사례가 참고용으로 제시됐다. AI가 대신할 수 있다고 판단되는 업무에는 신규 정원을 부여하지 않겠다는 취지의 내용도 담긴 것으로 알려졌다. 이를 접한 한 개발자는 "신규 채용 자제를 주문하는 것으로 이해할 수밖에 없는 내용"이라고 말했다.
+                </p>
+                <div class="news-source">
+                  <a href="https://www.kakaocorp.com/page/detail/11524" target="_blank" class="source-link">
+                    <i data-feather="external-link" class="source-icon"></i>
+                    기사 원문 보기
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 반박 기사 -->
+            <div class="news-rebuttal">
+              <div class="rebuttal-header">
+                <h3 class="rebuttal-title">카카오 공식 입장</h3>
+                <span class="rebuttal-date">2025.05.18</span>
+              </div>
+              <div class="rebuttal-content">
+                <p>
+                  카카오가 코딩 등 인공지능이 대신할 수 있는 직무에 대해 신규 채용을 제한하기 위해 인력 운용 설명 자료를 사내 게시판에 게재했다는 보도내용은 사실이 아닙니다. 카카오는 이러한 취지의 자료를 작성하거나 공지를 진행한 바 없으며, 관련 계획도 없음을 알려드립니다.
+                </p>
+              </div>
+            </div>
+
+            <!-- 댓글 형식의 내 의견 -->
+            <div class="comment-section">
+              <h3 class="comment-section-title">내 생각</h3>
+
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-avatar">
+                    <img src="https://via.placeholder.com/40" alt="문소희">
+                  </div>
+                  <div class="comment-info">
+                    <span class="comment-author">문소희</span>
+                    <span class="comment-time">2025.05.19</span>
+                  </div>
+                </div>
+                <div class="comment-body">
+                  <p>
+                    GPT가 2022년 말에 처음 공개되어, 불과 2년 만에 능력이 놀라운 정도로 향상되었습니다. AI를 사용하면 할수록, 최근 AI가 상상 이상으로 빠르게 발전하고 있다는 사실을 체감하고 있습니다. 특히 개발의 영역에서 GPT는 오류 해결, DB 연동 등 완성도 높게 작성해주며, 초보자보다 훨씬 효율적으로 코드를 작성하기도 합니다. 이러한 경험을 하면서 "개발자의 일 AI로 대체되지 않을까" 라는 위기의식이 생겼습니다.
+                  </p>
+                  <p>
+                    1년 전, 초심자가 챗 GPT만을 사용해서 어플을 만드는 영상을 보았습니다. 이러한 영상을 보며 느낀 것은 단순한 놀라움이 아닌 현실적인 위기감을 느꼈습니다. 누군가에겐 몇 주, 몇 달이 작업을 AI는 30분만에 해결해내는 모습이 충격적이였습니다. 더 이상 AI는 단순한 참고 도구가 아니라 생산과 창작의 주체가 되어가고 있습니다.
+                  </p>
+                  <p>
+                    이러한 흐름을 체감하던 도중, 최근 'AI가 대체 가능한 직무에 대해 채용을 줄이겠다'는 보도를 접하며 깊은 고민을 하게 되었습니다. 비록 보도된 기업은 이를 부인했지만, 저는 반복적이고 단순한 업무는 이미 AI에 의해 대체되고 있다고 느꼈습니다. 실제로 상담 챗봇, 자동 분류 시스템 등이 일상에 자연스럽게 스며들었습니다. '어떤 일을 사람이 해야 하는가'에 대한 기준이 급변하고 있다고 생각합니다.
+                  </p>
+                  <p>
+                    아직까지는 기술적 한계가 존재하지만, 앞으로 10년 안에 고도화된 AI가 더 많은 분야에서 사람의 자리를 대체할 것이라고 생각합니다. 이런 흐름 속에서 저는 기술의 발전을 수용하는 동시에, 인간만의 경쟁력을 키우기 위해 끊임없이 배워야 한다고 느꼈습니다. 이러한 고민과 각성은 제가 기술을 대하는 태도에도 긍정적인 영향을 주고 있습니다.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-like"><i data-feather="thumbs-up"></i> 좋아요</button>
+                  <button class="comment-reply"><i data-feather="message-square"></i> 답글</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project" class="section fade-in">
+      <div class="card">
+        <div class="card-header teal-gradient">
+          <h2 class="card-title gradient-text-teal">프로젝트/과제 중 기술적으로 어려웠던 부분과 해결 방안</h2>
+        </div>
+        <div class="card-content">
+          <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+              <h3 class="project-title">프로젝트 1. 테트리스 (1학년 C프로그래밍 팀프로젝트)</h3>
+
+              <div class="project-overview">
+                <h4>프로젝트 개요</h4>
+                <p>
+                  1학년 C프로그래밍 수업에서 2인 1조로 진행한 팀 프로젝트입니다. C++을 활용해 기존 테트리스의 기본 틀에 다양한 기능을 직접 설계하고 구현하였으며, 약 한 달간 랜덤으로 매칭된 팀원과 함께 기획, 개발, 디버깅 전 과정을 수행했습니다. 콘솔 환경에서 동작하는 게임의 구조를 이해하고 확장 기능을 추가하는 과정을 통해, 실전 코딩 경험과 함께 협업 및 문제 해결 역량을 함께 키울 수 있었습니다.
+                </p>
+              </div>
+
+              <div class="project-features">
+                <h4><span class="feature-icon">💡</span> 주요 기능 구현 내용</h4>
+                <ul class="feature-list">
+                  <li>
+                    <span class="feature-title">점수 시스템</span>
+                    <ul>
+                      <li>한 줄을 제거할 때마다 기본 점수가 부여되며, 한 번에 여러 줄을 제거할 경우 가중치가 적용되어 더 높은 점수를 얻을 수 있도록 설계했습니다.</li>
+                      <li>누적 점수를 바탕으로 게임 종료 후 리더보드에 점수를 저장하고, 상위 순위가 화면에 표시되도록 구현했습니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="feature-title">플레이타임 및 속도 조절</span>
+                    <ul>
+                      <li>실시간으로 플레이 시간을 측정하고 화면에 표시되도록 구현했습니다.</li>
+                      <li>일정 시간이 지날수록 블록이 내려오는 속도가 점점 빨라지도록 하여 게임 난이도를 조절했습니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="feature-title">게임 보조 기능</span>
+                    <ul>
+                      <li>다음에 나올 블록을 미리 보여주는 기능을 통해 사용자에게 전략적 선택이 가능하도록 했습니다.</li>
+                      <li>현재 블록을 홀드(보류)할 수 있는 기능, 일시정지 기능, 게임 종료가 임박했을 때 경고 메시지를 표시하는 기능도 함께 구현했습니다.</li>
+                      <li>또한 블록마다 랜덤 색상을 부여하여 게임 화면의 시각적 흥미를 높였습니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="feature-title">아이템 기능</span>
+                    <ul>
+                      <li>게임 중 특정 아이템이 등장하면 이를 활용해 아래와 같은 효과를 낼 수 있도록 했습니다:</li>
+                      <li>필드에서 한 줄 제거</li>
+                      <li>두 줄 제거</li>
+                      <li>1000점 추가 획득</li>
+                      <li>다음 블록을 1칸짜리 벽돌로 변경</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="project-challenges">
+                <h4>기술적으로 어려웠던 점과 해결 방법</h4>
+                <div class="challenge-item red">
+                  <h5>1. 아이템 충돌 기능 구현 실패</h5>
+                  <p>아이템을 일반 블록이 아닌 위치에 생성하여, 내려오는 블록과 충돌 시 효과가 발동되도록 구현하고자 했습니다. 하지만 아이템 위치의 `char` 값을 처리하는 과정에서 메모리 참조 오류가 반복적으로 발생했고, 결국 해당 방식은 제외하게 되었습니다. 이 경험을 통해 <strong>C언어에서의 메모리 처리와 포인터 관리의 중요성</strong>을 실감했습니다.</p>
+                </div>
+
+                <div class="challenge-item orange">
+                  <h5>2. 일시정지 중 플레이타임 계산 오류</h5>
+                  <p>'P' 버튼을 누르면 일시정지되도록 하는 기능은 어렵지 않게 구현했지만, 문제는 플레이 시간이었습니다. 일시정지 중 시간까지 플레이타임에 포함되는 오류가 발생해, 사용자가 오랜 시간 정지해도 플레이타임이 계속 증가하는 문제가 생겼습니다. 이를 해결하기 위해 'P'를 누른 시점과 해제된 시점을 기록한 뒤, 해당 시간을 전체 시간에서 제외하는 방식으로 정확한 플레이타임 측정을 구현했습니다.</p>
+                </div>
+
+                <div class="challenge-item yellow">
+                  <h5>3. 랭킹 기능 구현 시 파일 입출력 문제</h5>
+                  <p>점수와 함께 플레이어의 이름을 저장하기 위해 문자형 변수를 사용했지만, 이름을 파일에서 읽어올 때 포맷 충돌 문제가 발생했습니다. 이 문제를 해결하기 위해 구조체를 새로 정의하고, 이름을 구조체 안에 포함시켜 구조체 단위로 입출력을 처리했습니다. 이 과정에서 포인터와 구조체 배열의 개념이 낯설어 많은 시행착오를 겪었지만, 점차 오류를 해결해나가며 <strong>기초 메모리 구조와 입출력 처리 능력을 크게 향상</strong>시킬 수 있었습니다.</p>
+                </div>
+
+                <div class="challenge-item green">
+                  <h5>4. 블록 색상 지정 시 전체 화면 색 변경 오류</h5>
+                  <p>초기에는 블록에 색을 입히는 과정에서 전체 콘솔 색이 바뀌는 문제가 발생했습니다. 블록마다 색상을 개별적으로 지정하기 위한 방식이 필요했고, 여러 번 시도 끝에 블록을 구조체로 정의하고, `exist` 요소와 함께 `color` 요소를 추가하여 각 블록마다 고유 색을 가지도록 구조화하는 방식으로 문제를 해결했습니다.</p>
+                </div>
+
+                <div class="project-lessons">
+                  <h4>프로젝트를 통해 배운 점</h4>
+                  <p>
+                    이 프로젝트는 단순히 기능을 구현하는 것을 넘어서, 실제 프로그래밍 과정에서 발생하는 다양한 문제(포인터 오류, 입출력 처리, 타이머 연동, 콘솔 색 지정 등)를 해결하면서 <strong>디버깅 능력, 논리적 설계, 팀원 간 협업, 그리고 끈기 있게 오류를 해결하는 태도</strong>를 크게 키울 수 있었던 의미 있는 경험이었습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+              <h3 class="project-title">프로젝트 2. 그린케어 (3학년 모바일프로그래밍 개인 프로젝트)</h3>
+
+              <div class="project-overview">
+                <h4>프로젝트 개요</h4>
+                <p>
+                  3학년 "모바일프로그래밍" 수업에서 진행한 안드로이드 기반 개인 프로젝트입니다. Java와 Android Studio를 사용하여, 반려식물의 루틴 관리, 성장 기록, 알림 기능 등을 통합한 <strong>반려식물 관리 앱</strong> 구현을 진행중입니다. 6월 13일까지 진행되며, 실제 사용성을 고려한 기능 기획과 구현을 중심으로 앱 개발 역량을 키우고 있습니다. 실제 사용자 입장에서 필요한 기능을 정의하고, 다양한 안드로이드 컴포넌트(알림, 저장, 캘린더 등)를 적용하여 모바일 앱 설계와 생명주기 관리에 대한 이해를 심화할 수 있었습니다.
+                </p>
+              </div>
+
+              <div class="project-features">
+                <h4><span class="feature-icon">💡</span> 주요 기능 구현 내용</h4>
+                <ul class="feature-list">
+                  <li>
+                    <span class="feature-title">식물 등록</span>
+                    <ul>
+                      <li>식물 이름, 사진, 키운 날짜, 메모 등을 입력하여 개별 식물을 등록할 수 있습니다.</li>
+                      <li>식물 종류를 선택하면 API로부터 물주기, 햇빛 주기, 분갈이 주기 등의 루틴을 자동으로 설정합니다.</li>
+                      <li>"관엽식물", "다육식물" 등 간단한 분류만으로도 기본 주기를 추천받을 수 있습니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="feature-title">루틴 체크 기능</span>
+                    <ul>
+                      <li>오늘 해야 할 작업(물주기, 햇빛, 분갈이 등)을 일자별로 확인할 수 있습니다.</li>
+                      <li>루틴을 완료하면 체크하여 다음 예정일이 자동 갱신되며, 일정 미루기 기능도 추가되어 사용자가 일정에 맞춰 유연하게 관리할 수 있도록 했습니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="feature-title">성장 기록 (사진 일기)</span>
+                    <ul>
+                      <li>날짜별로 식물 사진과 메모를 남길 수 있어, 성장 과정을 시각적으로 기록할 수 있습니다.</li>
+                      <li>사진 타임라인 보기와 함께, 등록 초기 사진과 현재 사진을 비교하는 기능도 제공합니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="feature-title">알림 기능</span>
+                    <ul>
+                      <li>각 식물별 루틴(물, 햇빛, 분갈이 등)에 대해 시간 기반 푸시 알림을 설정할 수 있습니다.</li>
+                      <li>앱을 실행하지 않아도 정해진 시간에 알림이 도착하며, '1일 전 미리 알림' 기능도 옵션으로 선택할 수 있습니다.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="feature-title">통계 및 히스토리 기능</span>
+                    <ul>
+                      <li>전체 루틴 수행 횟수, 평균 수행 간격, 자주 놓치는 루틴 등을 통계로 확인할 수 있습니다.</li>
+                      <li>"이 식물, 마지막으로 언제 물 줬더라?" 같은 히스토리 확인이 가능하여, 관리 이력을 손쉽게 추적할 수 있습니다.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="project-challenges">
+                <h4>기술적으로 어려웠던 점과 해결 방법</h4>
+                <div class="challenge-item blue">
+                  <h5>1. Room DB에서 외래키 참조 무결성 오류 발생</h5>
+                  <p>Routine과 History 테이블에서 `plantId`를 외래키로 설정했지만, 종종 앱 실행 도중 새로운 루틴을 추가하거나 삭제할 때 충돌 오류가 발생했습니다. 원인은 삭제된 Plant의 ID를 참조하는 루틴이 남아 있거나, 아직 삽입되지 않은 plantId가 참조되었기 때문이었습니다. 이를 해결하기 위해 `@ForeignKey(onDelete = CASCADE)`를 적용하여 참조 대상이 삭제되면 함께 삭제되도록 했고, 삽입 전에는 `Plant` 테이블에 해당 ID가 존재하는지 쿼리로 검증하는 로직을 추가했습니다.</p>
+                </div>
+
+                <div class="challenge-item purple">
+                  <h5>2. Firebase 푸시 알림 수신 안됨 및 알림 권한 누락</h5>
+                  <p>Firebase Cloud Messaging(FCM)을 연동했지만, 테스트 디바이스에서는 알림이 수신되지 않거나, 앱이 꺼진 상태에서는 알림이 표시되지 않았습니다. 디버깅 결과 Android 13 이상에서는 명시적으로 `POST_NOTIFICATIONS` 권한을 요청해야 알림이 표시된다는 점을 놓치고 있었습니다. 이후 API 버전을 감지해 권한 요청 로직을 조건부로 추가했고, `NotificationChannel` 설정이 없던 문제도 함께 해결했습니다.</p>
+                </div>
+
+                <div class="challenge-item pink">
+                  <h5>3. Room 쿼리 결과 null 처리 미흡으로 인한 앱 강제 종료</h5>
+                  <p>Routine이나 History 조회 쿼리에서 결과가 null이거나 비어 있을 때 이를 처리하지 못해, 앱이 크래시되는 문제가 발생했습니다. 특히 LiveData를 통해 RecyclerView에 데이터를 바인딩할 때, 리스트가 null인 상태에서 submitList를 호출하면서 `NullPointerException`이 발생했습니다. 이후 DAO 반환값을 `List<>`로 고정하고, ViewModel에서 `?: emptyList()`를 사용해 방어 코드를 추가하여 문제를 해결했습니다.</p>
+                </div>
+
+                <div class="project-lessons">
+                  <h4>프로젝트를 통해 배운 점</h4>
+                  <p>
+                    이 프로젝트를 통해 안드로이드 앱 개발의 흐름과 생명주기에 대한 실전 감각을 익힐 수 있었습니다. 특히 Room DB, FCM, 알림 API 등 다양한 컴포넌트를 통합하면서 설계부터 예외 처리까지 고려해야 하는 백엔드 개발의 구조적 사고력을 키울 수 있었습니다. 또한 오류를 직접 겪고 해결하는 과정을 통해, 로그 분석 및 디버깅 능력의 중요성을 체감하며 개발자로서의 문제 해결 역량을 한층 성장시킬 수 있었습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in">
+      <div class="card">
+        <div class="card-header purple-gradient">
+          <h2 class="card-title gradient-text-purple">본인 역량에 대해 자유롭게 기술</h2>
+        </div>
+        <div class="card-content">
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon-container blue">
+                <span class="skill-icon">💻</span>
+              </div>
+              <h3 class="skill-title blue">프로그래밍 기초</h3>
+              <ul class="skill-list">
+                <li>C언어를 통해 포인터, 메모리, 반복문 등 기본기를 탄탄히 익힘</li>
+                <li>백준 알고리즘 문제를 꾸준히 풀며 문제 해결력과 로직 구성 능력 강화</li>
+                <li>기초 문법을 넘어서, 동작 원리까지 이해하려는 학습 태도를 지향</li>
+                <li>PCCE(코딩 기초 역량 시험)를 통해 레벨 3을 받았으며, PCCP(실전 중심의 문제 해결 능력 평가 시험) 예정</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon-container green">
+                <span class="skill-icon">⚙️</span>
+              </div>
+              <h3 class="skill-title green">백엔드 개발 경험</h3>
+              <ul class="skill-list">
+                <li>Java와 Spring Boot 기반으로 REST API, DB 연동, 예외 처리 등 백엔드 핵심 기능 구현</li>
+                <li>안드로이드 프로젝트에서는 API 연동, Room DB 사용, 알림 기능 구현 경험</li>
+                <li>코드가 단순히 작동하는 것을 넘어서, 안정적이고 구조적인 설계를 지향</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon-container red">
+                <span class="skill-icon">🔥</span>
+              </div>
+              <h3 class="skill-title red">끈기와 열정</h3>
+              <ul class="skill-list">
+                <li>오류가 나면 끝까지 원인을 파악하고 해결할 때까지 놓지 않는 성격</li>
+                <li>기능 하나를 구현하더라도 더 나은 방식이 없는지, 개선할 수 있는 여지가 있는지 항상 고민</li>
+                <li>기술을 학문이 아닌 '현실 문제를 해결하는 도구'로 받아들이고 끊임없이 배우고 시도</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon-container amber">
+                <span class="skill-icon">🤝</span>
+              </div>
+              <h3 class="skill-title amber">팀 프로젝트에서의 역할</h3>
+              <ul class="skill-list">
+                <li>팀 프로젝트를 할 때마다 <strong>자연스럽게 리더 역할</strong>을 맡아 팀을 조율하고 방향을 제시</li>
+                <li>개발뿐 아니라 기획, 일정 관리, 역할 분배 등 팀 전체를 하나로 묶는 역할을 수행</li>
+                <li>팀원 간의 의견을 조율하고, 함께 결정한 방향으로 끝까지 밀고 나가는 책임감을 갖고 프로젝트를 이끌어옴</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+  // Initialize Feather icons
+  document.addEventListener('DOMContentLoaded', function() {
+    feather.replace();
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileNav.classList.toggle('active');
+
+      // Toggle icon between menu and x
+      const icon = this.querySelector('svg');
+      if (mobileNav.classList.contains('active')) {
+        feather.replace(icon, { type: 'x' });
+      } else {
+        feather.replace(icon, { type: 'menu' });
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Quick navigation
+    const quickNavBtns = document.querySelectorAll('.quick-nav-btn');
+
+    quickNavBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 100;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Fade-in animation on scroll
+    const sections = document.querySelectorAll('.section');
+
+    function checkFade() {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.8) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    // Initial check
+    checkFade();
+
+    // Check on scroll
+    window.addEventListener('scroll', checkFade);
+  });
+</script>
 </body>
 </html>
