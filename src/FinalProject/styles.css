@@ -425,8 +425,61 @@ ul, ol {
     margin-bottom: 1rem;
 }
 
+.dotted-box-blue {
+    background-color: rgba(96, 165, 250, 0.05);
+    border: 2px dotted var(--blue);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.dotted-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--blue);
+    font-weight: 500;
+    font-style: italic;
+}
+.code-box {
+    background-color: #1e293b;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+}
+
+.code-box pre {
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
 .more-link {
     margin-top: 1rem;
+}
+.image-box {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.image-box img {
+    width: 70%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.img-caption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0.5em;
 }
 
 /* Issue Section */
@@ -521,6 +574,7 @@ ul, ol {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
 }
 
 .project-title {
@@ -540,10 +594,6 @@ ul, ol {
     margin-bottom: 1rem;
 }
 
-.feature-icon {
-    color: var(--teal);
-    margin-right: 0.5rem;
-}
 
 .feature-list {
     list-style-type: none;
@@ -563,6 +613,101 @@ ul, ol {
     list-style-type: disc;
     margin-left: 1.5rem;
 }
+/* 공통 카드 스타일 */
+.challenge-card {
+    display: flex;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* 공통 번호 원형 */
+.challenge-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+/* 공통 콘텐츠 스타일 */
+.challenge-content {
+    flex: 1;
+}
+
+.challenge-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.challenge-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.challenge-detail > div {
+    flex: 1 1 300px;
+}
+
+.label {
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.label.green {
+    color: #009688;
+}
+
+code {
+    background-color: #f3f4f6; /* 연한 회색, 시각적으로 부드러움 */
+    color: #c62828; /* 강조용 다크레드 */
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95em;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    white-space: nowrap;
+}
+
+
+/* 색상 테마 */
+.orange-bg    { background-color: #fff3e0; }
+.orange-number { background-color: #fb8c00; }
+.orange-title  { color: #ef6c00; }
+
+.yellow-bg     { background-color: #fffde7; }
+.yellow-number { background-color: #fbc02d; }
+.yellow-title  { color: #f9a825; }
+
+.green-bg      { background-color: #e8f5e9; }
+.green-number  { background-color: #43a047; }
+.green-title   { color: #2e7d32; }
+
+.red-bg        { background-color: #fff5f5; }
+.red-number    { background-color: #f44336; }
+.red-title     { color: #d32f2f; }
+
+.label {
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.label.green {
+    color: #009688;
+}
 
 .challenge-item {
     background-color: rgba(0, 0, 0, 0.03);
@@ -576,33 +721,6 @@ ul, ol {
     margin-bottom: 0.5rem;
 }
 
-.challenge-item.red h5 {
-    color: var(--red);
-}
-
-.challenge-item.orange h5 {
-    color: var(--orange);
-}
-
-.challenge-item.yellow h5 {
-    color: var(--amber);
-}
-
-.challenge-item.green h5 {
-    color: var(--green);
-}
-
-.challenge-item.blue h5 {
-    color: var(--blue);
-}
-
-.challenge-item.purple h5 {
-    color: var(--purple);
-}
-
-.challenge-item.pink h5 {
-    color: var(--pink);
-}
 
 /* Skills Section */
 .skills-grid {

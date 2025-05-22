@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Plan - 문소희 포트폴리오</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- head 안에 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -41,7 +43,6 @@
     <div class="container">
         <h1 class="page-title gradient-text-purple">Future Plan</h1>
 
-        <!-- 2025년의 목표 -->
         <!-- 2025년의 목표 -->
         <section class="section fade-in">
             <div class="card">
@@ -528,6 +529,14 @@
 
         // Check on scroll
         window.addEventListener('scroll', checkFade);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+<script>
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        scrollHorizontally: false,
+        navigation: true
     });
 </script>
 </body>
