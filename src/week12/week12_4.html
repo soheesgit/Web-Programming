@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseDown과 MouseUp으로 선 그리기</title>
+</head>
+<body onload="init()">
+<h3>mousedown과 mouseUp으로 선 그리기</h3>
+<hr>
+<canvas id="dragCanvas" style="background-color: aliceblue; width: 400; height: 300;"></canvas>
+<script>
+    var canvas, context;
+
+    function init() {
+        canvas = document.getElementById("dragCanvas");
+        context = canvas.getContext("2d");
+
+        context.lineWidth = 2;
+        context.strokeStyle = "blue";
+
+        canvas.addEventListener("mousemove", function (e) {
+            move(e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            down(e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            up(e)
+        }, false);
+    }
+
+    var startX = 0, startY = 0;
+    var drawing = false;
+
+    function draw(curX, curY) {
+        context.beginPath();
+        context.moveTo(startX, startY);
+        context.lineTo(curX, curY);
+        context.stroke();
+    }
+
+    function move(e) {
+        if (!drawing) return;
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        var curX = e.offsetX;
+        var curY = e.offsetY;
+        draw(curX, curY);
+    }
+
+    function down(e) {
+        startX = e.offsetX;
+        startY = e.offsetY;
+        drawing = true;
+    }
+
+    function up(e) {
+        var curX = e.offsetX;
+        var curY = e.offsetY;
+        drawing = false;
+
+
+    }
+
+</script>
+
+
+</body>
+</html>

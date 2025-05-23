@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>폼으로 도형 그리기</title>
+  <style>
+    .form-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 30px;
+      row-gap: 8px;
+      max-width: 500px;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group label {
+      display: inline-block;
+      width: 60px;
+      text-align: right;
+      margin-right: 5px;
+    }
+
+    .form-group input[type="color"] {
+      width: 40px;
+      height: 30px;
+      padding: 0;
+      border: 1px solid;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+<h3>폼으로 사각형 그리기</h3>
+<hr>
+
+<div class="form-grid">
+  <div class="form-group">
+    <label for="x">x</label>
+    <input type="number" id="x" value="20">
+  </div>
+  <div class="form-group">
+    <label for="y">y</label>
+    <input type="number" id="y" value="30">
+  </div>
+  <div class="form-group">
+    <label for="w">width</label>
+    <input type="number" id="w" value="150">
+  </div>
+  <div class="form-group">
+    <label for="h">height</label>
+    <input type="number" id="h" value="150">
+  </div>
+  <div class="form-group">
+    <label for="line">선굵기</label>
+    <input type="number" id="line" value="3">
+  </div>
+  <div class="form-group" style="justify-content: flex-end;">
+    <label for="color">선색</label>
+    <input type="color" id="color" value="#ff0000">
+  </div>
+  <div class="btn-wrapper">
+    <button onclick="drawRect()">그리기</button>
+  </div>
+  <div class="btn-wrapper">
+    <button onclick="clearCanvas()">지우기</button>
+  </div>
+</div>
+
+<br>
+<canvas id="myCanvas" width="500" height="250" style="background-color:aliceblue;"></canvas>
+
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  function drawRect() {
+    const x = parseInt(document.getElementById("x").value);
+    const y = parseInt(document.getElementById("y").value);
+    const w = parseInt(document.getElementById("w").value);
+    const h = parseInt(document.getElementById("h").value);
+    const lineWidth = parseInt(document.getElementById("line").value);
+    const color = document.getElementById("color").value;
+
+    ctx.lineWidth = lineWidth;
+    ctx.strokeStyle = color;
+    ctx.strokeRect(x, y, w, h);
+  }
+
+  function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+</script>
+</body>
+
+</html>

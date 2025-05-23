@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>캔버스에 파이 차트 그리기</title>
+  <style>
+    canvas {
+      background-color: aliceblue;
+      display: block;
+    }
+
+    .inputs {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  </style>
+</head>
+
+<body>
+<h3>학점 별로 학생 수를 입력하면 파이 차트로 비율 그리기</h3>
+<hr>
+
+<div class="inputs">
+  <div class="item">A <input type="number" id="a" value="10"> 명 </div>
+  <div class="item">B <input type="number" id="b" value="20"> 명 </div>
+  <div class="item">C <input type="number" id="c" value="15"> 명 </div>
+  <div class="item">D <input type="number" id="d" value="2"> 명 </div>
+  <div class="item">F <input type="number" id="f" value="2"> 명 </div>
+  <button onclick="drawChart()">차트그리기</button>
+</div>
+
+<canvas id="chartCanvas" width="600" height="400"></canvas>
+
+<script>
+  const canvas = document.getElementById("chartCanvas");
+  const ctx = canvas.getContext("2d");
+
+  function drawChart() {
+    const a = parseInt(document.getElementById("a").value) || 0;
+    const b = parseInt(document.getElementById("b").value) || 0;
+    const c = parseInt(document.getElementById("c").value) || 0;
+    const d = parseInt(document.getElementById("d").value) || 0;
+    const f = parseInt(document.getElementById("f").value) || 0;
+
+    const data = [a, b, c, d, f];
+    const labels = ['A', 'B', 'C', 'D', 'F'];
+    const colors = ['blue', 'green', 'yellow', 'magenta', 'red'];
+
+    const total = data.reduce((acc, val) => acc + val, 0);
+    let startAngle = 0;
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = 0; i < data.length; i++) {
+      const sliceAngle = (data[i] / total) * 2 * Math.PI;
+      const endAngle = startAngle + sliceAngle;
+
+      ctx.beginPath();
+      ctx.moveTo(centerX, centerY);
+      ctx.arc(centerX, centerY, 150, startAngle, endAngle);
+      ctx.closePath();
+      ctx.fillStyle = colors[i];
+      ctx.fill();
+
+      startAngle = endAngle;
+    }
+
+    ctx.font = "14px Arial";
+    ctx.fillStyle = "blue";
+    ctx.textAlign = "left";
+
+    let legendY = 20;
+    for (let i = 0; i < data.length; i++) {
+      const percent = total ? ((data[i] / total) * 100).toFixed(0) : 0;
+      ctx.fillText(`${labels[i]} 학점${percent}% : ${colors[i]}`, 10, legendY);
+      legendY += 18;
+    }
+  }
+</script>
+</body>
+
+</html>

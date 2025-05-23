@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Canvas</title>
+</head>
+<body onload="init()">
+<canvas id="canvas" width="500px" height="300px" style="background-color: rgb(208, 53, 208);"></canvas>
+<div id="control">
+    Velocity<input type="number" id="velocity" value="30" min="0" max="100" step="1"/>
+    Angle<input type="number" id="angle" value="45" min="0" max="90" step="1"/>
+    <div id="score">Score = 0</div>
+    <button onclick="start()">Start</button>
+</div>
+</body>
+<script>
+    var canvas, context, ballX, ballY, ballVx, ballVy, velocity, angle, ballRadius;
+    const g =9.8;
+    var score =0;
+    var image= new Image();
+    function init(){
+        ballX = 10;
+        ballY = 250;
+        ballRadius=10;
+        canvas = document.getElementById("canvas");
+        context = canvas.getContext("2d");
+        draw();
+
+    }
+    function draw(){
+        context.clearRect(0,0,500,300);
+        drawBall();
+        drawBackground();
+    }
+
+    function drawBall(){
+        context.beginPath();
+        context.arc(ballX, ballY, ballRadius, 0, 2.0*Math.PI, true);
+        context.fillStyle = "black";
+        context.fill();
+    }
+
+    function drawBackground(){
+        image.onload = function(){
+            context.drawImage(image,400,100,100,100);
+        }
+        image.src = "target.png";
+    }
+
+    function start(){
+        init();
+
+        velocity = Number(document.getElementById("velocity").value);
+        angle = Number(document.getElementById("angle").value);
+        var angleR = angle*Math.PI/180;
+
+        ballVx = velocity * Math.cos(angleR);
+        ballVy = -velocity*Math.sin(angleR);
+
+        draw();
+        timer = setInterval(calculate, 50);
+    }
+
+    function calculate(){
+        ballVy = ballVy + g;
+        ballY = ballY +ballVy;
+        ballX = ballX+ ballVx;
+
+        if((ballX>=420)&&(ballY <=480)&&(ballY>=100)&&(ballY<=200)){
+            score++;
+            document.getElementById("score").innerHTML = "Score = "+score;
+            clearInterval(timer);
+        }
+
+        if(ballY >=300|| ballY <0){
+            clearInterval(timer);
+        }
+
+        drawBall();
+    }
+
+
+
+</script>
+</html>
