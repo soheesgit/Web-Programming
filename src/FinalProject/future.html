@@ -1,139 +1,542 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <title>관심 기업</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Plan - 문소희 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- head 안에 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-<header>
-    <div><strong>문소희</strong></div>
-    <nav>
-        <a href="intro.html">본인 소개</a>
-        <a href="skills.html">관심 기술</a>
-        <a href="future.html">관심 기업</a>
-    </nav>
-</header>
+<!-- Navigation Bar -->
+<header class="navbar">
+    <div class="container">
+        <div class="navbar-content">
+            <a href="index.html" class="logo">문소희 포트폴리오</a>
 
-<section class="timeline" id="plan">
-    <div class="current-status" id="current">
-        <h1 class="section-title">현재 진행중인 일정</h1>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">본인 소개</a>
+                <a href="tech.html" class="nav-link">관심 기술 및 기업</a>
+                <a href="future.html" class="nav-link active">Future Plan</a>
+            </nav>
 
-        <div class="status-card-wrapper">
-            <div class="info-card">
-                <div class="info-title">창업동아리</div>
-                <div class="info-subtitle">AI 기반 동네 추천 플랫폼 개발</div>
-                <ul>
-                    <li><strong>진행 기간:</strong> 2025/05/20 ~ 2026/02/28</li>
-                    <li>NCF 기반 추천 시스템 구현 (백엔드 담당)</li>
-                </ul>
-            </div>
-
-            <div class="info-card">
-                <div class="info-title">PCCP 교육</div>
-                <div class="info-subtitle">프로그래머스에서 진행하는 코딩 인증 교육</div>
-                <ul>
-                    <li><strong>진행 기간:</strong> 2025/05/19 ~ 2025/05/31</li>
-                    <li><strong>시험 일자:</strong> 6/2(월) 19:00 ~ 21:00 (2시간)</li>
-                </ul>
-            </div>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                <i data-feather="menu"></i>
+            </button>
         </div>
 
-        <img src="future_under.png" alt="아래로 스크롤" class="scroll-icon" onclick="scrollToNextBlock()" />
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <a href="index.html" class="nav-link">본인 소개</a>
+            <a href="tech.html" class="nav-link">관심 기술 및 기업</a>
+            <a href="future.html" class="nav-link active">Future Plan</a>
+        </nav>
     </div>
-</section>
+</header>
 
+<main class="main-content">
+    <div class="container">
+        <h1 class="page-title gradient-text-purple">Future Plan</h1>
 
+        <!-- 2025년의 목표 -->
+        <section class="section fade-in">
+            <div class="card">
+                <div class="card-header purple-gradient">
+                    <h2 class="card-title gradient-text-purple">전체적인 목표</h2>
+                </div>
+                <div class="card-content">
+                    <div class="goals-container">
+                        <!-- 프로젝트 수행 -->
+                        <div class="goal-card">
+                            <h3 class="goal-title purple">1️⃣ 프로젝트 수행 계획</h3>
 
-    <section class="month-block" id="july">
-        <h2>7월</h2>
-        <ul>
-            <li>운영체제 공부 (혼자 공부하는 컴구+운영체제)</li>
-            <li>창업 동아리 조직화</li>
-            <li>7/7: ADSP 접수, 7/21: SQLD 접수, 7/28: 토익 접수</li>
-        </ul>
-    </section>
+                            <div class="goal-items">
+                                <div class="goal-item">
+                                    <h4 class="goal-item-title">1-1. 창업동아리 활동 – AI 기반 동네 추천 플랫폼</h4>
+                                    <div class="goal-meta">
+                                        <div class="meta-item purple">
+                                            <p class="meta-label">기간</p>
+                                            <p class="meta-value">2025.05.20 ~ 2026.02.28</p>
+                                        </div>
+                                        <div class="meta-item purple">
+                                            <p class="meta-label">형태</p>
+                                            <p class="meta-value">팀 프로젝트 (백엔드 3명 + 프론트엔드 1명)</p>
+                                        </div>
+                                        <div class="meta-item purple">
+                                            <p class="meta-label">역할</p>
+                                            <p class="meta-value">백엔드</p>
+                                        </div>
+                                    </div>
+                                    <div class="goal-details">
+                                        <h5 class="goal-details-title">핵심 목표:</h5>
+                                        <ul class="goal-list">
+                                            <li>사용자 성향 분석을 기반으로 세부 행정동(동네) 단위 맞춤 여행지를 추천하는 웹 기반 플랫폼 개발</li>
+                                            <li>네이버 API와 사용자 입력을 종합하여 자동 일정 및 이동 경로 생성 기능 구현</li>
+                                            <li>감성 태그, 실내/외 분류, 가격대 필터 등 사용자 중심의 다양한 탐색 기능 탑재</li>
+                                            <li>지역 소상공인 노출 확대 및 슬로우 트래블/웰니스 트렌드에 최적화된 체류형 여행 제공</li>
+                                        </ul>
 
-    <section class="month-block" id="august">
-        <h2>8월</h2>
-        <ul>
-            <li>8/9: ADSP 시험 응시</li>
-            <li>8/23: SQLD 시험 응시</li>
-            <li>토익 집중 학습</li>
-        </ul>
-    </section>
+                                        <h5 class="goal-details-title">활용 기술:</h5>
+                                        <ul class="goal-list">
+                                            <li>백엔드: Spring Boot, JPA, MySQL</li>
+                                            <li>데이터 수집 및 가공: 공공데이터포털(OpenAPI), 기상청 날씨 API, 네이버 API</li>
+                                            <li>AI 추천 엔진: NCF(Neural Collaborative Filtering) 기반 사용자–장소 임베딩 학습 및 다층 퍼셉트론 구조를 활용한 개인화 동네 추천</li>
+                                            <li>API 설계: RESTful API 구조, Swagger 문서화</li>
+                                            <li>기타: GitHub 협업, Notion 기반 일정 관리, Figma UI 와이어프레임 공유</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-    <section class="month-block" id="september">
-        <h2>9월</h2>
-        <ul>
-            <li>9/14: 토익 응시</li>
-            <li>9/28: 토익 응시</li>
-        </ul>
-    </section>
+                                <div class="goal-item">
+                                    <h4 class="goal-item-title">1-2. 개인 토이 프로젝트 2건 이상 완성 및 배포</h4>
+                                    <div class="goal-meta">
+                                        <div class="meta-item purple">
+                                            <p class="meta-label">기간</p>
+                                            <p class="meta-value">2025년 여름방학 ~ 2026년 겨울방학</p>
+                                        </div>
+                                        <div class="meta-item purple">
+                                            <p class="meta-label">형태</p>
+                                            <p class="meta-value">개인 주도형 백엔드 중심 풀사이클 프로젝트</p>
+                                        </div>
+                                    </div>
+                                    <div class="goal-details">
+                                        <h5 class="goal-details-title">목표:</h5>
+                                        <ul class="goal-list">
+                                            <li>서비스 기획부터 DB 설계 → API 서버 개발 → AWS를 통한 실서비스 배포까지 엔드투엔드(End-to-End) 경험 획득</li>
+                                            <li>간단한 프론트엔드 페이지(React 기반)도 직접 구성</li>
+                                            <li>GitHub에 전체 프로젝트 기록(이슈 관리, 커밋, 브랜치 전략 등)을 체계적으로 저장</li>
+                                            <li>Tistory 블로그에 회고 글 게시</li>
+                                        </ul>
 
-    <section class="month-block" id="oct-dec">
-        <h2>10월 ~ 12월</h2>
-        <ul>
-            <li>코딩테스트, Java, Spring Boot 공부</li>
-            <li>프로젝트 병행 + 학업 집중</li>
-        </ul>
-    </section>
+                                        <h5 class="goal-details-title">프로젝트 주제:</h5>
+                                        <ul class="goal-list">
+                                            <li>주제①: 위치 + 날씨 기반 실시간 동네 산책 루트 추천 웹앱
+                                                <ul>
+                                                    <li>공공데이터(OpenAPI), 기상청 API 연동 + 위치 좌표 기반 경로 추천 + AWS로 배포</li>
+                                                </ul>
+                                            </li>
+                                            <li>주제②: 오늘 뭐 먹지? – 랜덤 식당 추천 웹앱 개인 예산 관리 웹서비스 (가계부 API + 대시보드)
+                                                <ul>
+                                                    <li>Spring Boot + MySQL 기반 REST API, 프론트는 React, AWS로 정적 파일 배포</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
 
-    <section class="month-block" id="jan">
-        <h2>2026년 1월</h2>
-        <ul>
-            <li>AI 플랫폼 마무리</li>
-            <li>정보처리기사 필기 접수</li>
-            <li>새 프로젝트 계획 / 인턴 여부 결정</li>
-        </ul>
-    </section>
+                                        <h5 class="goal-details-title">활용 기술:</h5>
+                                        <ul class="goal-list">
+                                            <li>백엔드: Spring Boot, JPA, Spring Security, MySQL</li>
+                                            <li>프론트엔드: React.js, HTML/CSS</li>
+                                            <li>기타: GitHub Issue 기반 일정 관리, Notion 문서화, Tistory 정리(회고 + 문제 해결 과정 기록)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <section class="month-block" id="feb-jun">
-        <h2>2026년 2~6월</h2>
-        <ul>
-            <li>2월: 정보처리기사 필기 응시</li>
-            <li>3월: 캡스톤 프로젝트 준비</li>
-            <li>4월: 실기 시험 응시</li>
-            <li>6월: 방학 인턴 탐색 (<a href="https://groupby.kr/programs" target="_blank">groupby.kr</a>)</li>
-        </ul>
-    </section>
-</section>
-<button id="scrollToTop" class="scroll-top-btn" onclick="scrollToTop()">↑</button>
+                        <!-- 컴퓨터 사이언스 기초 심화 학습 -->
+                        <div class="goal-card">
+                            <h3 class="goal-title blue">2️⃣ 컴퓨터 사이언스 기초 및 심화 학습</h3>
 
-<footer>
-    &copy; 2025 문소희. All rights reserved.
-</footer>
+                            <div class="goal-items">
+                                <div class="goal-item">
+                                    <h4 class="goal-item-title">2-1. 운영체제 + 컴퓨터 구조 독학</h4>
+                                    <div class="goal-details blue-bg">
+                                        <h5 class="goal-details-title">학습 이유:</h5>
+                                        <p class="goal-text">운영체제 과목을 수강하지 않아, 기반 지식 부족</p>
+
+                                        <h5 class="goal-details-title">교재:</h5>
+                                        <p class="goal-text">『혼자 공부하는 컴퓨터 구조+운영체제』</p>
+
+                                        <h5 class="goal-details-title">학습 계획:</h5>
+                                        <ul class="goal-list">
+                                            <li>주 3회 학습 → 각 단원별 개념 정리 + 문제 풀이</li>
+                                            <li>7월 중에 학습 끝내기 목표</li>
+                                            <li>Notion 정리 + 티스토리 기록</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <h4 class="goal-item-title">2-2. 자료구조 & 알고리즘 학습</h4>
+                                    <div class="goal-details blue-bg">
+                                        <h5 class="goal-details-title">학습 플랫폼:</h5>
+                                        <p class="goal-text">백준 / 프로그래머스</p>
+
+                                        <h5 class="goal-details-title">목표:</h5>
+                                        <p class="goal-text">주 3회 이상 문제 풀이, 하루 2문제 이상</p>
+
+                                        <h5 class="goal-details-title">학습 범위:</h5>
+                                        <ul class="goal-list">
+                                            <li>정렬, 탐색, 그리디, DFS/BFS, DP, 스택/큐, 해시, 트리</li>
+                                            <li>시간복잡도 분석 및 개선 훈련</li>
+                                        </ul>
+
+                                        <h5 class="goal-details-title">추가 계획:</h5>
+                                        <ul class="goal-list">
+                                            <li>티스토리에 풀이 방식과 어려웠던 점, 로직 해설 정리</li>
+                                            <li>2026 상반기 코딩 테스트를 목표로 실전 감각 유지</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item">
+                                    <h4 class="goal-item-title">2-3. 데이터베이스 학습</h4>
+                                    <div class="goal-details blue-bg">
+                                        <h5 class="goal-details-title">학습 방식:</h5>
+                                        <ul class="goal-list">
+                                            <li>실습 기반 RDB 설계 훈련 (정규화, ERD 작성, JOIN 등)</li>
+                                            <li>SQL 문법 연습 및 쿼리 최적화 실습</li>
+                                            <li>트랜잭션, 인덱스, 잠금 등 고급 개념도 자격증 학습과 병행</li>
+                                        </ul>
+
+                                        <h5 class="goal-details-title">활용 자료:</h5>
+                                        <p class="goal-text">SQLD 자격증 교재 + 실제 DB 설계 예제 실습</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 자격증 취득 -->
+                        <div class="goal-card">
+                            <h3 class="goal-title green">3️⃣ 자격증 취득 목표</h3>
+
+                            <div class="cert-grid">
+                                <div class="cert-item">
+                                    <h4 class="cert-title">3-1. ADSP (데이터 분석 준전문가)</h4>
+                                    <div class="cert-details">
+                                        <div class="cert-section">
+                                            <p class="cert-label">응시 예정일:</p>
+                                            <p class="cert-text">2025년 8월 9일 (1차 접수 7월 7일)</p>
+                                        </div>
+                                        <div class="cert-section">
+                                            <p class="cert-label">학습 계획:</p>
+                                            <ul class="cert-list">
+                                                <li>통계 기초, 데이터 분석 기법, 분석 프로세스 이론 학습</li>
+                                                <li>기출문제 풀이 → 데이터 해석 능력 향상 목표</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cert-item">
+                                    <h4 class="cert-title">3-2. SQLD (SQL 개발자)</h4>
+                                    <div class="cert-details">
+                                        <div class="cert-section">
+                                            <p class="cert-label">응시 예정일:</p>
+                                            <p class="cert-text">2025년 8월 23일 (1차 접수 7월 21일)</p>
+                                        </div>
+                                        <div class="cert-section">
+                                            <p class="cert-label">학습 내용:</p>
+                                            <ul class="cert-list">
+                                                <li>SQL 실습 + 트랜잭션, 인덱스 등 심화 내용 학습</li>
+                                                <li>쿼리 작성 및 테이블 설계 중심 실무 역량 확보</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cert-item">
+                                    <h4 class="cert-title">3-3. TOEIC 700점 이상</h4>
+                                    <div class="cert-details">
+                                        <div class="cert-section">
+                                            <p class="cert-label">응시 예정일:</p>
+                                            <p class="cert-text">2025년 9월 14일 & 9월 28일</p>
+                                        </div>
+                                        <div class="cert-section">
+                                            <p class="cert-label">학습 계획:</p>
+                                            <ul class="cert-list">
+                                                <li>주 3회 RC/LC 훈련 및 단어 암기</li>
+                                                <li>기술문서 독해력 향상 중심 (문법보다 실용성 중심 독해 훈련)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2025 ~ 2026 실전 역량 강화 계획 -->
+        <section class="section fade-in">
+            <div class="card">
+                <div class="card-header amber-gradient">
+                    <h2 class="card-title gradient-text-amber">2025 ~ 2026 실전 역량 강화 계획</h2>
+                </div>
+                <div class="card-content">
+                    <div class="timeline-container">
+                        <!-- 2025년 7월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon amber">
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title amber">2025년 7월 (여름방학 시작)</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">운영체제 기초 학습</h4>
+                                <p>「혼자 공부하는 컴퓨터 구조 + 운영체제」 도서를 활용하여 운영체제 필수 개념(프로세스, 스레드, 메모리, 스케줄링 등) 독학</p>
+                                <p>→ 티스토리, Notion 정리 병행</p>
+
+                                <h4 class="timeline-subtitle">창업동아리 프로젝트 진행 시작</h4>
+                                <p>AI 기반 동네 추천 플랫폼 백엔드 개발 본격화</p>
+                                <p>→ NCF 추천 알고리즘 설계 및 사용자 기반 API 구현</p>
+
+                                <h4 class="timeline-subtitle">토이 프로젝트 1차 개발 시작</h4>
+                                <ul class="timeline-list">
+                                    <li>주제: 위치 + 날씨 기반 실시간 동네 산책 루트 추천 웹앱</li>
+                                    <li>기술 스택: Java, Spring Boot, Open API (기상청, 위치 정보 등)</li>
+                                    <li>개발 범위: 백엔드 중심으로 API 설계, 날씨·위치 정보 수집, 사용자 요청에 따른 맞춤 산책 경로 제공 기능 구현</li>
+                                    <li>개발 형태: 개인 기획 기반, 백엔드 단독 개발 → 기능 설계 및 구조 설계부터 시작</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">자격증 시험 접수</h4>
+                                <ul class="timeline-list">
+                                    <li>7/7: ADSP 접수 (시험일 8/9)</li>
+                                    <li>7/21: SQLD 접수 (시험일 8/23)</li>
+                                    <li>7/28: TOEIC 접수 (시험일 9/14)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 2025년 8월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon orange">
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title orange">2025년 8월</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">토이 프로젝트 1차 완성 및 배포</h4>
+                                <ul class="timeline-list">
+                                    <li>사용자 피드백 수용 가능한 형태로 배포</li>
+                                    <li>GitHub Readme 정비 및 기능 설명 문서화</li>
+                                    <li>기능별 API 명세서 작성</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">ADSP, SQLD 자격증 시험 응시</h4>
+                                <ul class="timeline-list">
+                                    <li>8/9: ADSP 응시</li>
+                                    <li>8/23: SQLD 응시</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">TOEIC 준비</h4>
+                                <p>공식 문제집 및 어휘 암기 중심 주 3회 학습 진행</p>
+                            </div>
+                        </div>
+
+                        <!-- 2025년 9월 ~ 12월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon red">
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title red">2025년 9월 ~ 12월 (2학기)</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">TOEIC 시험 응시</h4>
+                                <ul class="timeline-list">
+                                    <li>9/14(1차) / 9/28(2차, 필요 시 재응시)</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">코딩테스트 집중 준비</h4>
+                                <ul class="timeline-list">
+                                    <li>주 3~4회 백준/프로그래머스 문제 풀이</li>
+                                    <li>알고리즘 유형별 분류 및 시간 복잡도 분석 연습</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">Spring Boot 심화 실습</h4>
+                                <ul class="timeline-list">
+                                    <li>실습 기반 강의 수강 + 기능별 간단 서비스 구현 병행</li>
+                                    <li>예외 처리, API 보안, 트랜잭션 처리 등 고급 개념 학습</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">창업동아리 프로젝트 기능 확장</h4>
+                                <ul class="timeline-list">
+                                    <li>MVP 기능 완성 → 관리자 기능 및 추천 정확도 개선</li>
+                                    <li>배포 준비 및 피드백 대응 로직 반영</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 2026년 1월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon blue">
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title blue">2026년 1월 (겨울방학)</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">토이 프로젝트 2차 개발 시작</h4>
+                                <ul class="timeline-list">
+                                    <li>주제: 실생활 기반 서비스 구현</li>
+                                    <li>데이터베이스 설계 및 API 시나리오 우선 정의</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">정보처리기사 필기시험 접수</h4>
+                                <p>실기까지 고려한 이론 학습 시작</p>
+                            </div>
+                        </div>
+
+                        <!-- 2026년 2월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon indigo">
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title indigo">2026년 2월</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">토이 프로젝트 2차 완성 및 배포</h4>
+                                <ul class="timeline-list">
+                                    <li>사용자 중심 기능 구현 및 피드백 시뮬레이션</li>
+                                    <li>GitHub 정리 + 배포 링크 포함</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">정보처리기사 필기 시험 응시</h4>
+                                <p>학습 정리 후 기출 문제 풀이 반복</p>
+
+                                <h4 class="timeline-subtitle">창업동아리 결과 정리</h4>
+                                <ul class="timeline-list">
+                                    <li>성과 발표 자료 및 기술보고서 정리</li>
+                                    <li>유지보수 방향성 도출</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 2026년 3월 ~ 6월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon purple">
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title purple">2026년 3월 ~ 6월 (4학년 1학기)</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">캡스톤 프로젝트 수행</h4>
+                                <ul class="timeline-list">
+                                    <li>실제 문제 해결형 주제를 기반으로 진행</li>
+                                    <li>팀 단위 협업 + Git 관리 + 발표 연습 포함</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">정보처리기사 실기 시험 응시 (4월 예정)</h4>
+
+                                <h4 class="timeline-subtitle">하계 인턴십 준비</h4>
+                                <ul class="timeline-list">
+                                    <li>지원서 작성, 포트폴리오 업데이트</li>
+                                    <li>기술 면접 예상 질문 정리 및 연습</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 2026년 7월 ~ 8월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon pink">
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title pink">2026년 7월 ~ 8월 (하계 방학)</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">하계 인턴십 참여</h4>
+                                <ul class="timeline-list">
+                                    <li>실무 백엔드 개발 업무 경험</li>
+                                    <li>협업 도구(Git, Jira 등) 및 CI/CD 환경 활용 실습</li>
+                                    <li>코드 리뷰, 회의 참여를 통해 실전 중심의 커뮤니케이션 및 개발 문화 적응</li>
+                                    <li>실무에서 요구되는 백엔드 구조 및 데이터 흐름 이해도 향상</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">인턴십 참여가 어려운 경우</h4>
+                                <ul class="timeline-list">
+                                    <li>실제 서비스 시나리오를 반영한 팀 프로젝트 기획 및 실행</li>
+                                    <li>협업 기반 사이드 프로젝트 진행 (기획 – 설계 – 구현 – 배포 전 과정 포함)</li>
+                                    <li>깃허브 활동 강화: 기능 단위 커밋, 브랜치 전략, PR 리뷰 연습 등 협업 중심 개발 습관 정립</li>
+                                    <li>기술 블로그/TIL을 통한 학습 내용 정리 및 커뮤니티 공유</li>
+                                    <li>백엔드 아키텍처 관련 기술서적 및 실전 사례 학습 (ex. MSA, 트래픽 분산 구조, 캐싱 전략 등)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 2026년 9월 ~ 12월 -->
+                        <div class="timeline-item">
+                            <div class="timeline-icon green">
+                                <i data-feather="graduation-cap" class="timeline-icon-inner"></i>
+                            </div>
+                            <h3 class="timeline-title green">2026년 9월 ~ 12월 (4학년 2학기)</h3>
+                            <div class="timeline-content">
+                                <h4 class="timeline-subtitle">최종 포트폴리오 완성</h4>
+                                <ul class="timeline-list">
+                                    <li>토이 프로젝트, 동아리, 인턴십 결과 통합</li>
+                                    <li>GitHub + Notion 기반 포트폴리오 정비</li>
+                                </ul>
+
+                                <h4 class="timeline-subtitle">취업 준비 집중</h4>
+                                <ul class="timeline-list">
+                                    <li>기업별 서류 제출</li>
+                                    <li>CS 이론 정리 및 기술 면접 대비</li>
+                                    <li>토이 프로젝트 설명 및 코드 리뷰 연습</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
 
 <script>
-    const blocks = document.querySelectorAll(".month-block");
+    // Initialize Feather icons
+    document.addEventListener('DOMContentLoaded', function() {
+        feather.replace();
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                blocks.forEach(block => block.classList.remove("focused"));
-                entry.target.classList.add("focused");
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+
+            // Toggle icon between menu and x
+            const icon = this.querySelector('svg');
+            if (mobileNav.classList.contains('active')) {
+                feather.replace(icon, { type: 'x' });
+            } else {
+                feather.replace(icon, { type: 'menu' });
             }
         });
-    }, { threshold: 0.6 });
 
-    blocks.forEach(block => observer.observe(block));
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-    function scrollToNextBlock() {
-        const next = document.getElementById("july");
-        next.scrollIntoView({ behavior: 'smooth' });
-    }
+        // Fade-in animation on scroll
+        const sections = document.querySelectorAll('.section');
 
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+        function checkFade() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
 
-    window.addEventListener("scroll", () => {
-        const scrollBtn = document.getElementById("scrollToTop");
-        if (scrollBtn && window.scrollY > window.innerHeight * 0.5) {
-            scrollBtn.classList.add("visible");
-        } else {
-            scrollBtn.classList.remove("visible");
+                if (sectionTop < windowHeight * 0.8) {
+                    section.classList.add('visible');
+                }
+            });
         }
+
+        // Initial check
+        checkFade();
+
+        // Check on scroll
+        window.addEventListener('scroll', checkFade);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+<script>
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        scrollHorizontally: false,
+        navigation: true
     });
 </script>
 </body>
