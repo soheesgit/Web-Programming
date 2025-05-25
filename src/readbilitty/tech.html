@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관심 기술 및 기업 - 문소희 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Add AOS Animate on Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Add Swiper Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Lightbox for gallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <!-- Add Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Add Tilt.js for 3D effects -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <!-- Main JS -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header class="navbar">
+    <div class="container">
+        <div class="navbar-content">
+            <p class="logo">문소희 포트폴리오</p>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">본인 소개</a>
+                <a href="tech.html" class="nav-link active">관심 기술 및 기업</a>
+                <a href="future.html" class="nav-link">Future Plan</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero-section tech-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">
+                <span class="gradient-text-blue">관심 기술</span> 및 <span class="gradient-text-nol">관련 기업</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                미래를 이끌어갈 기술과 함께 성장하고 있습니다
+            </p>
+        </div>
+        <div class="tech-icons" data-aos="fade-up" data-aos-delay="400">
+            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="100">
+                <i data-feather="coffee"></i>
+                <span>Java</span>
+            </div>
+            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="200">
+                <i data-feather="feather"></i>
+                <span>Spring</span>
+            </div>
+            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="300">
+                <i data-feather="database"></i>
+                <span>MySQL</span>
+            </div>
+            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="400">
+                <i data-feather="terminal"></i>
+                <span>Python</span>
+            </div>
+            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="500">
+                <i data-feather="code"></i>
+                <span>C/C++</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll-indicator">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <div>
+            <span class="scroll-arrow">
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+    </div>
+</section>
+
+<main class="main-content">
+    <div class="container">
+        <!-- Skills Section -->
+        <section class="section">
+            <div class="card" data-aos="fade-up">
+                <div class="card-header blue-gradient">
+                    <h2 class="card-title gradient-text-blue">사용 가능 기술</h2>
+                </div>
+                <div class="card-content">
+                    <div class="tech-sections-nav">
+                        <button class="tech-nav-btn active" data-section="languages">프로그래밍 언어</button>
+                        <button class="tech-nav-btn" data-section="tech-stack">기술 스택</button>
+                    </div>
+
+                    <div class="tech-sections-content">
+                        <div class="tech-section active" id="languages">
+                            <h3 class="tech-section-title" data-aos="fade-right">
+                                <span class="tech-icon-small"><i data-feather="code"></i></span>
+                                사용 가능 언어
+                            </h3>
+
+                            <div class="tech-cards">
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper java">
+                                                <i data-feather="coffee"></i>
+                                            </div>
+                                            <h4 class="tech-name">Java <span class="tech-level high">High</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>팀/개인 프로젝트에서 주력 언어로 활용하며 객체지향적 설계 기반의 로직 구현 경험</li>
+                                            <li>Spring Boot 프레임워크와 연계한 웹 백엔드 개발에 집중하고 있음</li>
+                                        </ul>
+
+                                        <div class="tech-code-example">
+                                            <div class="code-header">
+                                                <span class="code-title">Java 코드 예시</span>
+                                                <div class="code-actions">
+                                                    <button class="copy-btn"><i data-feather="copy"></i></button>
+                                                </div>
+                                            </div>
+                                            <pre><code>@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+        return userService.findById(id)
+            .map(user -> ResponseEntity.ok().body(user))
+            .orElse(ResponseEntity.notFound().build());
+    }
+}</code></pre>
+                                        </div>
+
+                                        <div class="tech-related-projects">
+                                            <h5>관련 프로젝트</h5>
+                                            <div class="project-chips">
+                                                <span class="project-chip">개인 블로그</span>
+                                                <span class="project-chip">쇼핑몰 API</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper python">
+                                                <i data-feather="terminal"></i>
+                                            </div>
+                                            <h4 class="tech-name">Python <span class="tech-level high">High</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>코딩테스트 대비를 위한 알고리즘 풀이에 주력, 문제 해결 경험 다수</li>
+                                            <li>리스트 컴프리헨션, 람다, 정렬/탐색 알고리즘 등 문법 및 알고리즘 익숙</li>
+                                            <li>Pandas, NumPy 등 기본 라이브러리로 데이터 분석 실습 경험 있음</li>
+                                        </ul>
+
+                                        <div class="tech-code-example">
+                                            <div class="code-header">
+                                                <span class="code-title">Python 코드 예시</span>
+                                                <div class="code-actions">
+                                                    <button class="copy-btn"><i data-feather="copy"></i></button>
+                                                </div>
+                                            </div>
+                                            <pre><code>def solution(numbers):
+    # 리스트 컴프리헨션 사용
+    squares = [num ** 2 for num in numbers if num > 0]
+
+    # 람다 함수와 함께 맵 사용
+    result = list(map(lambda x: x + 10, squares))
+
+    return sorted(result, reverse=True)</code></pre>
+                                        </div>
+
+                                        <div class="tech-achievements">
+                                            <h5>알고리즘 역량</h5>
+                                            <div class="achievements-list">
+                                                <div class="achievement">
+                                                    <i data-feather="award"></i>
+                                                    <span>백준 골드 등급</span>
+                                                </div>
+                                                <div class="achievement">
+                                                    <i data-feather="check-circle"></i>
+                                                    <span>프로그래머스 Lv.3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper c">
+                                                <i data-feather="cpu"></i>
+                                            </div>
+                                            <h4 class="tech-name">C / C++ <span class="tech-level middle">Middle</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>C언어 기반의 콘솔 게임(테트리스) 프로젝트 개발 경험</li>
+                                            <li>포인터, 배열, 구조체 기반 메모리 제어 및 로우레벨 로직 구현 경험</li>
+                                            <li>디버깅과 출력 테스트를 반복하며 구조적 사고와 문제 추적 능력 강화</li>
+                                        </ul>
+
+                                        <div class="project-highlight">
+                                            <h5>프로젝트 스냅샷</h5>
+                                            <div class="image-placeholder">
+                                                <i data-feather="grid"></i>
+                                                <span>테트리스 프로젝트</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper js">
+                                                <i data-feather="code"></i>
+                                            </div>
+                                            <h4 class="tech-name">JavaScript <span class="tech-level low">Low</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>기본적인 프론트엔드 로직 구현 경험</li>
+                                            <li>HTML/CSS와 함께 간단한 인터랙션 처리에 활용한 경험 있음</li>
+                                            <li>웹프로그래밍 수업 과제를 통해 기초적인 동작 원리 습득</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper kotlin">
+                                                <i data-feather="smartphone"></i>
+                                            </div>
+                                            <h4 class="tech-name">Kotlin <span class="tech-level low">Low</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>Java 기반 앱 개발 경험을 바탕으로 Kotlin 문법 학습 중</li>
+                                            <li>Android 앱 생명주기, 액티비티/프래그먼트 처리 방식 중심으로 학습</li>
+                                            <li>Jetpack 구성요소 및 MVVM 아키텍처 이해를 목표로 실습 중</li>
+                                        </ul>
+
+                                        <div class="learning-roadmap">
+                                            <h5>학습 로드맵</h5>
+                                            <div class="roadmap-steps">
+                                                <div class="roadmap-step completed">
+                                                    <div class="step-marker">1</div>
+                                                    <div class="step-content">
+                                                        <h6>Kotlin 기본 문법</h6>
+                                                        <p>완료</p>
+                                                    </div>
+                                                </div>
+                                                <div class="roadmap-step completed">
+                                                    <div class="step-marker">2</div>
+                                                    <div class="step-content">
+                                                        <h6>안드로이드 기초</h6>
+                                                        <p>완료</p>
+                                                    </div>
+                                                </div>
+                                                <div class="roadmap-step in-progress">
+                                                    <div class="step-marker">3</div>
+                                                    <div class="step-content">
+                                                        <h6>MVVM 패턴</h6>
+                                                        <p>학습 중</p>
+                                                    </div>
+                                                </div>
+                                                <div class="roadmap-step">
+                                                    <div class="step-marker">4</div>
+                                                    <div class="step-content">
+                                                        <h6>Jetpack 활용</h6>
+                                                        <p>예정</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-section" id="tech-stack">
+                            <h3 class="tech-section-title" data-aos="fade-right">
+                                <span class="tech-icon-small"><i data-feather="layers"></i></span>
+                                사용 가능 기술 스택
+                            </h3>
+
+                            <div class="tech-cards">
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper spring">
+                                                <i data-feather="feather"></i>
+                                            </div>
+                                            <h4 class="tech-name">Spring Boot <span class="tech-level middle">Middle</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>RESTful API 설계 및 컨트롤러-서비스-레포지토리 구조 구성 경험</li>
+                                            <li>JPA와 MySQL을 이용한 CRUD 및 연관관계 매핑 구현</li>
+                                            <li>팀 프로젝트에서 Git, Notion과 연동해 협업 환경 구축</li>
+                                        </ul>
+
+                                        <div class="architecture-diagram">
+                                            <h5>Spring Boot 아키텍처</h5>
+                                            <div class="image-placeholder">
+                                                <i data-feather="layers"></i>
+                                                <span>Spring 아키텍처 다이어그램</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper db">
+                                                <i data-feather="database"></i>
+                                            </div>
+                                            <h4 class="tech-name">SQL / MySQL <span class="tech-level middle">Middle</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>사용자 요구에 맞춘 ERD 설계 및 정규화 기반 테이블 구축 경험</li>
+                                            <li>SELECT, JOIN, GROUP BY, 트랜잭션 처리 쿼리 직접 작성</li>
+                                            <li>SQLD 자격증 취득을 목표로 학습 중</li>
+                                        </ul>
+
+                                        <div class="tech-code-example">
+                                            <div class="code-header">
+                                                <span class="code-title">SQL 쿼리 예시</span>
+                                                <div class="code-actions">
+                                                    <button class="copy-btn"><i data-feather="copy"></i></button>
+                                                </div>
+                                            </div>
+                                            <pre><code>SELECT
+    u.username,
+    COUNT(o.id) AS total_orders,
+    SUM(o.total_amount) AS total_spent
+FROM
+    users u
+JOIN
+    orders o ON u.id = o.user_id
+WHERE
+    o.order_date >= DATE_SUB(CURRENT_DATE, INTERVAL 30 DAY)
+GROUP BY
+    u.id
+HAVING
+    total_orders > 1
+ORDER BY
+    total_spent DESC
+LIMIT 10;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tech-item expandable" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="tech-header">
+                                        <div class="tech-name-wrapper">
+                                            <div class="tech-icon-wrapper web">
+                                                <i data-feather="layout"></i>
+                                            </div>
+                                            <h4 class="tech-name">HTML / CSS <span class="tech-level middle">Middle</span></h4>
+                                        </div>
+                                        <button class="expand-btn">
+                                            <i data-feather="chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    <div class="tech-details">
+                                        <ul>
+                                            <li>기본적인 웹 페이지 레이아웃 구현 및 정적 구조 구성 가능</li>
+                                            <li>Flexbox, Grid, Media Query를 활용한 반응형 페이지 제작 경험</li>
+                                            <li>팀 과제에서 프론트엔드 영역 일부 참여하며 UI 구성 담당</li>
+                                        </ul>
+
+                                        <div class="project-gallery">
+                                            <h5>웹 프로젝트 스크린샷</h5>
+                                            <div class="gallery-grid">
+                                                <!-- Replace with your image -->
+                                                <a href="#" class="gallery-item" data-lightbox="web-projects">
+                                                    <div class="image-placeholder">
+                                                        <i data-feather="layout"></i>
+                                                        <span>웹 디자인 1</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="gallery-item" data-lightbox="web-projects">
+                                                    <div class="image-placeholder">
+                                                        <i data-feather="layout"></i>
+                                                        <span>웹 디자인 2</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOL Universe Company Section -->
+        <section class="section">
+            <div class="card" data-aos="fade-up">
+                <div class="card-header nol-gradient">
+                    <h2 class="card-title gradient-text-nol">관심 기업: 놀유니버스</h2>
+                </div>
+                <div class="card-content">
+                    <div class="company-intro-card" data-aos="fade-up">
+                        <div class="company-intro-content">
+                            <h3 class="company-intro-title">혁신 플랫폼 기업 <span class="gradient-text-nol">놀유니버스</span></h3>
+                            <p class="company-intro-text">
+                                놀유니버스(NOL UNIVERSE)는 여가를 넘어 일상의 행복을 전파하는 기업입니다. 항공·숙박·패키지 등 여행은
+                                물론 엔터테인먼트·문화·예술과 같은 모든 일상의 경험을 제공하는 혁신 플랫폼 기업입니다.
+                            </p>
+                            <div class="company-stats">
+                                <div class="company-stat" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="stat-value">1,000<span class="stat-plus">+</span></div>
+                                    <div class="stat-label">임직원 수</div>
+                                </div>
+                                <div class="company-stat" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="stat-value">3,466<span class="stat-unit">억</span></div>
+                                    <div class="stat-label">매출 (2023)</div>
+                                </div>
+                                <div class="company-stat" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="stat-value">2022</div>
+                                    <div class="stat-label">설립년도</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-intro-visual">
+                            <div class="company-logo-wrapper" data-aos="zoom-in">
+                                <!-- Replace with company logo -->
+                                <div class="company-logo-placeholder">
+                                    <span>NOL UNIVERSE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="company-grid">
+                        <div class="company-media" data-aos="fade-up">
+                            <div class="company-video">
+                                <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src="https://www.youtube.com/embed/PRBwVmdV5S4"
+                                        title="놀유니버스 소개 영상"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen
+                                ></iframe>
+                            </div>
+
+                            <div class="company-info-card">
+                                <h3 class="company-info-title">기업 정보</h3>
+                                <ul class="company-info-list">
+                                    <li>
+                                        <span class="info-label">산업:</span> 판매유통
+                                    </li>
+                                    <li>
+                                        <span class="info-label">기업형태:</span> 대기업
+                                    </li>
+                                    <li>
+                                        <span class="info-label">사원수:</span> 1,000명
+                                    </li>
+                                    <li>
+                                        <span class="info-label">설립:</span> 2022.04.01
+                                    </li>
+                                    <li>
+                                        <span class="info-label">매출:</span> 3,466억 5천만 원 (2023)
+                                    </li>
+                                    <li>
+                                        <span class="info-label">주소:</span> 경기도 성남시 수정구 금토로 70
+                                    </li>
+                                    <li>
+                                        <span class="info-label">웹사이트:</span>
+                                        <a
+                                                href="https://nol-universe.com/"
+                                                target="_blank"
+                                                class="external-link"
+                                        >
+                                            https://nol-universe.com/
+                                            <i data-feather="external-link" class="link-icon"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="company-details" data-aos="fade-up">
+                            <div class="tabs">
+                                <div class="tabs-header">
+                                    <button class="tab-btn active" data-tab="tab-company-1">회사 소개</button>
+                                    <button class="tab-btn" data-tab="tab-company-2">서비스 현황</button>
+                                    <button class="tab-btn" data-tab="tab-company-3">관심 이유</button>
+                                </div>
+
+                                <div class="tabs-content">
+                                    <div class="tab-panel active" id="tab-company-1">
+                                        <div class="company-intro">
+                                            <h3 class="company-section-title nol-color">소개글</h3>
+                                            <p>
+                                                놀유니버스(NOL UNIVERSE)는 여가를 넘어 일상의 행복을 전파하는 기업입니다. 항공·숙박·패키지 등 여행은
+                                                물론 엔터테인먼트·문화·예술과 같은 모든 일상의 경험을 제공하는 혁신 플랫폼 기업입니다.
+                                            </p>
+                                            <p>
+                                                놀유니버스는 글로벌 트래블 플랫폼 '야놀자', 국내 대표 여행ᆞ엔터테인먼트 플랫폼 '인터파크', 초개인화
+                                                여행 플랫폼 '트리플', 외국인 관광객을 위한 '트리플 코리아(TRIPLE Korea)'를 운영하고 있습니다. 이들
+                                                플랫폼은 각각 방대한 데이터와 개인화 AI(인공지능) 기술력을 바탕으로 고객들에게 새로운 경험을
+                                                제공하고 있습니다. 또 플랫폼 간 초연결과 시너지를 통해 고객 각각의 경험에 흩어진 즐거움을 하나로
+                                                연결하여 일상의 의미를 더하는 서비스를 창출하고자 합니다.
+                                            </p>
+
+                                            <div class="company-platforms-showcase" data-aos="fade-up">
+                                                <div class="swiper company-platforms-swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="platform-card">
+                                                                <div class="platform-logo">
+                                                                    <!-- Yanolja logo placeholder -->
+                                                                    <div class="image-placeholder">
+                                                                        <i data-feather="home"></i>
+                                                                        <span>야놀자</span>
+                                                                    </div>
+                                                                </div>
+                                                                <h4 class="platform-name">야놀자</h4>
+                                                                <p class="platform-desc">글로벌 트래블 플랫폼</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="platform-card">
+                                                                <div class="platform-logo">
+                                                                    <!-- Interpark logo placeholder -->
+                                                                    <div class="image-placeholder">
+                                                                        <i data-feather="shopping-bag"></i>
+                                                                        <span>인터파크</span>
+                                                                    </div>
+                                                                </div>
+                                                                <h4 class="platform-name">인터파크</h4>
+                                                                <p class="platform-desc">국내 대표 여행ᆞ엔터테인먼트 플랫폼</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="platform-card">
+                                                                <div class="platform-logo">
+                                                                    <!-- Triple logo placeholder -->
+                                                                    <div class="image-placeholder">
+                                                                        <i data-feather="map"></i>
+                                                                        <span>트리플</span>
+                                                                    </div>
+                                                                </div>
+                                                                <h4 class="platform-name">트리플</h4>
+                                                                <p class="platform-desc">초개인화 여행 플랫폼</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-panel" id="tab-company-2">
+                                        <div class="company-services">
+                                            <h3 class="company-section-title nol-color">서비스 현황</h3>
+
+                                            <div class="service-cards">
+                                                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                                                    <div class="service-icon">
+                                                        <i data-feather="home"></i>
+                                                    </div>
+                                                    <h4 class="service-title">숙박 예약</h4>
+                                                    <p class="service-description">
+                                                        국내외 호텔, 펜션, 리조트, 게스트하우스 등 다양한 숙박 시설을 간편하게 예약할 수 있는 서비스 제공
+                                                    </p>
+                                                </div>
+
+                                                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                                                    <div class="service-icon">
+                                                        <i data-feather="map"></i>
+                                                    </div>
+                                                    <h4 class="service-title">여행 패키지</h4>
+                                                    <p class="service-description">
+                                                        항공, 숙박, 투어를 한번에 예약할 수 있는 패키지 상품으로, 개별 예약보다 저렴한 가격으로 제공
+                                                    </p>
+                                                </div>
+
+                                                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                                                    <div class="service-icon">
+                                                        <i data-feather="compass"></i>
+                                                    </div>
+                                                    <h4 class="service-title">액티비티</h4>
+                                                    <p class="service-description">
+                                                        현지 투어, 체험, 티켓 등 여행지에서 즐길 수 있는 다양한 액티비티 예약 서비스
+                                                    </p>
+                                                </div>
+
+                                                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                                                    <div class="service-icon">
+                                                        <i data-feather="music"></i>
+                                                    </div>
+                                                    <h4 class="service-title">엔터테인먼트</h4>
+                                                    <p class="service-description">
+                                                        공연, 전시, 스포츠 등 다양한 엔터테인먼트 티켓 예매 서비스
+                                                    </p>
+                                                </div>
+
+                                                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                                                    <div class="service-icon">
+                                                        <i data-feather="users"></i>
+                                                    </div>
+                                                    <h4 class="service-title">커뮤니티</h4>
+                                                    <p class="service-description">
+                                                        여행 정보 공유, 리뷰, 맛집 추천 등 사용자들이 직접 참여하는 여행 커뮤니티 플랫폼
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-panel" id="tab-company-3">
+                                        <div class="company-interest">
+                                            <h3 class="company-section-title nol-color">관심 이유</h3>
+
+                                            <div class="interest-points">
+                                                <div class="interest-point" data-aos="fade-up" data-aos-delay="100">
+                                                    <div class="interest-number">01</div>
+                                                    <div class="interest-content">
+                                                        <h4>AI 기반 기술과 데이터 활용</h4>
+                                                        <p>
+                                                            놀유니버스는 방대한 여행 데이터와 사용자 행동 패턴을 분석하여 개인화된 추천 서비스를 제공합니다. 이러한 AI 기반 기술이 실제 비즈니스에 어떻게 적용되는지 경험하고 싶습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="interest-point" data-aos="fade-up" data-aos-delay="200">
+                                                    <div class="interest-number">02</div>
+                                                    <div class="interest-content">
+                                                        <h4>성장하는 여행 플랫폼 시장</h4>
+                                                        <p>
+                                                            코로나19 이후 여행 시장이 빠르게 회복되며, 디지털 여행 플랫폼의 중요성이 더욱 커지고 있습니다. 이러한 성장 산업에서 경력을 쌓고 싶습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="interest-point" data-aos="fade-up" data-aos-delay="300">
+                                                    <div class="interest-number">03</div>
+                                                    <div class="interest-content">
+                                                        <h4>기술 기반의 혁신 문화</h4>
+                                                        <p>
+                                                            놀유니버스는 기술을 중심으로 지속적인 혁신을 추구하는 기업 문화를 가지고 있습니다. 기술적 도전과 성장 기회가 많은 환경에서 일하고 싶습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="career-match" data-aos="fade-up">
+                                                <h4 class="career-match-title">기업 방향성과 내 진로의 일치점</h4>
+                                                <div class="match-chart">
+                                                    <div class="match-item">
+                                                        <div class="match-label">기술 기반 서비스</div>
+                                                        <div class="match-bar">
+                                                            <div class="match-progress" style="width: 95%;" data-aos="width">
+                                                                <span>95%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="match-item">
+                                                        <div class="match-label">백엔드 개발 역량</div>
+                                                        <div class="match-bar">
+                                                            <div class="match-progress" style="width: 90%;" data-aos="width">
+                                                                <span>90%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="match-item">
+                                                        <div class="match-label">데이터 활용 능력</div>
+                                                        <div class="match-bar">
+                                                            <div class="match-progress" style="width: 85%;" data-aos="width">
+                                                                <span>85%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="match-item">
+                                                        <div class="match-label">사용자 경험 이해</div>
+                                                        <div class="match-bar">
+                                                            <div class="match-progress" style="width: 80%;" data-aos="width">
+                                                                <span>80%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">문소희 포트폴리오</div>
+                <p class="footer-text">&copy; 2024 All Rights Reserved</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:thgml89567@naver.com" class="footer-link">
+                    <i data-feather="mail"></i> thgml89567@naver.com
+                </a>
+                <a href="https://github.com/soheesgit" target="_blank" class="footer-link">
+                    <i data-feather="github"></i> GitHub
+                </a>
+                <a href="https://thgml89567.tistory.com/" target="_blank" class="footer-link">
+                    <i data-feather="external-link"></i> Tistory
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top">
+    <i data-feather="arrow-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

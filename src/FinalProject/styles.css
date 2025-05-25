@@ -390,6 +390,13 @@ ul, ol {
 .timeline-item.purple .timeline-marker {
     background-color: var(--purple);
 }
+.timeline-item.orange .timeline-marker {
+    background-color: var(--orange);
+}
+
+.timeline-item.amber .timeline-marker {
+    background-color: var(--amber);
+}
 
 .timeline-item.pink .timeline-marker {
     background-color: var(--pink);
@@ -411,6 +418,14 @@ ul, ol {
 
 .timeline-item.purple .timeline-title {
     color: var(--purple);
+}
+
+.timeline-item.amber .timeline-title {
+    color: var(--amber);
+}
+
+.timeline-item.orange .timeline-title {
+    color: var(--orange);
 }
 
 .timeline-item.pink .timeline-title {
@@ -747,9 +762,6 @@ code {
     margin-bottom: 1rem;
 }
 
-.skill-icon-container.blue {
-    background-color: rgba(59, 130, 246, 0.1);
-}
 
 .skill-icon-container.green {
     background-color: rgba(16, 185, 129, 0.1);
@@ -762,46 +774,83 @@ code {
 .skill-icon-container.amber {
     background-color: rgba(245, 158, 11, 0.1);
 }
-
-.skill-icon {
-    font-size: 1.25rem;
-}
-
 .skill-title {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1.2rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e2e2;
+    transition: background-color 0.25s ease, box-shadow 0.3s ease;
 }
 
-.skill-title.blue {
-    color: var(--blue);
+.skill-title:hover {
+    background-color: #f7f7f7;
 }
 
-.skill-title.green {
-    color: var(--green);
+.skill-title::after {
+    content: '▲';
+    font-size: 0.95rem;
+    margin-left: 0.75rem;
+    transition: transform 0.2s ease;
 }
 
-.skill-title.red {
-    color: var(--red);
+.skill-title.active::after {
+    transform: rotate(180deg);
 }
 
-.skill-title.amber {
-    color: var(--amber);
+.accordion-content {
+    display: none;
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
 }
 
+.accordion-content.open {
+    display: block;
+}
+
+.skill-subtitle {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* 일반 리스트 */
 .skill-list {
     list-style-type: disc;
     padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
+/* 리스트 항목 */
 .skill-list li {
     margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 /* Tech Page Styles */
 .tech-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -991,6 +1040,7 @@ code {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
 }
 
 .prep-title {
@@ -1162,7 +1212,7 @@ code {
 
 .goal-meta {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -1198,7 +1248,9 @@ code {
 }
 
 .goal-details-title {
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -1411,10 +1463,6 @@ code {
         grid-template-columns: 1fr 1fr;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .tech-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1439,10 +1487,6 @@ code {
 @media (min-width: 1024px) {
     .company-grid {
         grid-template-columns: 1fr 2fr;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .prep-points {
@@ -1611,7 +1655,6 @@ code {
 .tech-item {
     background-color: #fff;
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -1633,6 +1676,27 @@ code {
     align-items: center;
     gap: 0.5rem;
 }
+
+@keyframes subtlePulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255, 215, 0, 0);
+        background-color: transparent;
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        background-color: rgba(255, 255, 150, 0.1);
+    }
+}
+
+.highlight {
+    animation: subtlePulse 2s infinite;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
 .tech-level {
     font-size: 0.75rem;
@@ -1684,10 +1748,14 @@ code {
 .cert-list {
     list-style-type: disc;
     padding-left: 1.5rem;
+    font-size: 0.875rem;
 }
 
 .cert-list li {
     margin-bottom: 0.25rem;
+}
+.cert-list li::marker {
+    font-size: 0.8em;
 }
 
 /* 반응형 개선 */
