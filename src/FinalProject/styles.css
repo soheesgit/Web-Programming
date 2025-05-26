@@ -291,7 +291,6 @@ ul, ol {
     backdrop-filter: blur(8px);
     padding: 0.75rem;
     border-radius: 9999px;
-    box-shadow: var(--box-shadow);
 }
 
 .quick-nav-btn {
@@ -323,7 +322,6 @@ ul, ol {
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--white);
-    box-shadow: var(--box-shadow-lg);
 }
 
 .profile-image img {
@@ -380,7 +378,6 @@ ul, ol {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    box-shadow: var(--box-shadow);
 }
 
 .timeline-item.blue .timeline-marker {
@@ -463,7 +460,6 @@ ul, ol {
     padding: 1rem 1.25rem;
     margin: 1.5rem auto;
     max-width: 600px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: 'Courier New', Courier, monospace;
     overflow-x: auto;
 }
@@ -507,7 +503,6 @@ ul, ol {
 .issue-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -586,7 +581,6 @@ ul, ol {
 .project-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
@@ -634,7 +628,6 @@ ul, ol {
     border-radius: 12px;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     align-items: flex-start;
     gap: 20px;
 }
@@ -692,7 +685,6 @@ code {
     padding: 3px 8px;
     border-radius: 6px;
     border: 1px solid #e0e0e0;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
     white-space: nowrap;
 }
 
@@ -747,7 +739,6 @@ code {
 .skill-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -811,7 +802,6 @@ code {
     background-color: #f9fafb;
     border-radius: 0.75rem;
     border: 1px solid #f0f0f0;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
 }
 
@@ -901,15 +891,20 @@ code {
     aspect-ratio: 16 / 9;
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--box-shadow);
 }
 
 .company-info-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.company-info-img img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+
 }
 
 .company-info-title {
@@ -949,7 +944,6 @@ code {
 .company-intro, .company-reasons {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -984,7 +978,6 @@ code {
 .job-posting {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -1027,6 +1020,29 @@ code {
     gap: 1.5rem;
 }
 
+.job-apply {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.apply-btn {
+    background-color: var(--nol-blue);
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.apply-btn:hover {
+    background-color: var(--nol-blue-dark);
+}
+
+
 /* Career Preparation Section */
 .career-prep {
     display: flex;
@@ -1037,7 +1053,6 @@ code {
 .prep-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
     margin-top: 2rem;
@@ -1165,7 +1180,6 @@ code {
 .goal-card {
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -1327,7 +1341,6 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--box-shadow);
 }
 
 .timeline-icon.amber {
@@ -1520,7 +1533,6 @@ code {
 .news-article, .news-rebuttal {
     background-color: #fff;
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
