@@ -60,7 +60,7 @@
                 <div class="card-content">
                     <h3 class="tech-section-title">사용 가능 언어</h3>
                     <div class="tech-section">
-                        <div class="tech-item highlight">
+                        <div class="tech-item highlight" onclick="openModal()">
                             <div class="tech-header">
                                 <h4 class="tech-name">Java <span
                                         class="tech-level high">High</span></h4>
@@ -71,8 +71,51 @@
                                 <li>Spring Boot 기반 웹 백엔드 개발에 중점적으로 활용</li>
                             </ul>
                         </div>
+                        <!-- 팝업 모달 -->
+                        <div id="techModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeModal()">&times;</span>
+                                <h3>Java란?</h3>
+                                <p><br>
+                                    Java는 <strong>객체 지향 프로그래밍 언어</strong>로, 다양한 운영체제와 환경에서 실행 가능한 플랫폼 독립성을 갖추고 있습니다.
+                                </p>
+                                <p>
+                                    특히 <strong>백엔드 개발에서의 안정성과 확장성</strong>으로 널리 사용되며, <strong>Spring Boot</strong> 프레임워크와 결합해
+                                    REST API 서버나 웹 애플리케이션 구축에 최적화되어 있습니다.
+                                </p>
+                                <p>
+                                    강력한 라이브러리 생태계와 활발한 커뮤니티 지원 덕분에 <u>유지보수성과 협업 효율</u> 또한 뛰어나며, 기업용 솔루션부터 스타트업 서비스까지 폭넓게 활용됩니다.
+                                </p>
+                                <div style="margin-top:1.2rem; background:#f4f4f8; border-radius:0.75rem; padding:1rem 1.25rem;">
+                                    <p style="margin:0; color:#555;">
+                                        ✅ <strong>이런 분께 추천</strong><br>
+                                        - 객체 지향 개념에 익숙하고 싶은 분<br>
+                                        - 엔터프라이즈 백엔드 개발에 관심 있는 분<br>
+                                        - 실무에 강한 언어로 취업 준비 중인 분
+                                    </p>
+                                </div>
 
-                        <div class="tech-item highlight">
+                                <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #ddd;" />
+
+                                <h4 style="margin-bottom: 0.75rem;">관심 기술로 Java를 선택한 이유</h4>
+                                <p>
+                                    처음에는 다양한 언어를 접해보며 방향을 고민했지만, 강의를 따라하며 <strong>Spring Boot 기반 API 서버</strong>를 구축하면서
+                                    Java의 구조적이고 명확한 문법이 <strong>백엔드 개발에 딱 맞는 언어</strong>라는 걸 느꼈습니다.
+                                </p>
+                                <p>
+                                    특히 <strong>객체 지향적인 사고방식</strong>을 통해 <u>기능을 명확하게 설계하고 유지보수까지 고려</u>하는 방식이
+                                    저의 개발 스타일과 잘 맞았습니다.
+                                </p>
+                                <p>
+                                    단순히 빠르게 구현하는 것보다, <strong>탄탄한 구조와 안정적인 서비스 흐름</strong>을 중시하는 저에게
+                                    Java는 더 깊이 공부하고 싶은 언어가 되었고, 지금은 <span style="color:#4f46e5; font-weight:600;">가장 자신 있는 기술</span>로 자리잡았습니다.
+                                </p>
+
+
+                            </div>
+                        </div>
+
+                        <div class="tech-item">
                             <div class="tech-header">
                                 <h4 class="tech-name">Python <span
                                         class="tech-level high">High</span></h4>
@@ -120,7 +163,7 @@
 
                     <div class="tech-section">
 
-                        <div class="tech-item highlight">
+                        <div class="tech-item ">
                             <div class="tech-header">
                                 <h4 class="tech-name">Spring Boot <span
                                         class="tech-level middle">Middle</span>
@@ -456,111 +499,108 @@
                             </p>
                         </div>
 
-                        <div class="company-options">
 
-                            <!-- 티젠소프트 카드 -->
-                            <div class="company-option">
-                                <img src="src/tech_tigensoft.png" alt="티젠소프트 로고" class="company-logo">
-                                <h4 class="option-title">티젠소프트</h4>
-                                <p class="option-desc">
-                                    티젠소프트는 카카오페이 공식 파트너사로, 웹·모바일 기반의 통합 메시징 및 멀티미디어 솔루션을
-                                    개발·제공하는 IT 전문 기업입니다. 빅데이터·AI·클라우드 기술을 접목한 비대면 커뮤니케이션 플랫폼
-                                    구축에 주력하고 있습니다.
-                                </p>
+                        <!-- 티젠소프트 카드 -->
+                        <div class="company-option">
+                            <img src="src/tech_tigensoft.png" alt="티젠소프트 로고" class="company-logo">
+                            <h4 class="option-title">티젠소프트</h4>
+                            <p class="option-desc">
+                                티젠소프트는 카카오페이 공식 파트너사로, 웹·모바일 기반의 통합 메시징 및 멀티미디어 솔루션을
+                                개발·제공하는 IT 전문 기업입니다. 빅데이터·AI·클라우드 기술을 접목한 비대면 커뮤니케이션 플랫폼
+                                구축에 주력하고 있습니다.
+                            </p>
 
-                                <h5 class="option-subtitle">'티젠소프트'를 가고 싶은 이유</h5>
-                                <p class="option-desc">
-                                    티젠소프트는 <strong>Java, Spring Framework, MySQL</strong> 등 제가 학습·실습 중인 기술 스택과 유사한 환경을
-                                    갖추고 있어,
-                                    <strong>학습 내용을 실전과 자연스럽게 연결</strong>할 수 있는 좋은 기회라고 판단했습니다.<br>
+                            <h5 class="option-subtitle">'티젠소프트'를 가고 싶은 이유</h5>
+                            <p class="option-desc">
+                                티젠소프트는 <strong>Java, Spring Framework, MySQL</strong> 등 제가 학습·실습 중인 기술 스택과 유사한 환경을
+                                갖추고 있어,
+                                <strong>학습 내용을 실전과 자연스럽게 연결</strong>할 수 있는 좋은 기회라고 판단했습니다.<br>
 
-                                    또한 <strong>자체 커뮤니케이션 시스템을 개발·운영</strong>하는 구조는 단기 외주가 아닌 <strong>지속 가능한 서비스 개발
-                                    경험</strong>을 가능하게 해주며,
-                                    <strong>유지보수까지 고려하는 개발자</strong>로 성장하고자 하는 제 목표와도 잘 맞습니다.<br>
+                                또한 <strong>자체 커뮤니케이션 시스템을 개발·운영</strong>하는 구조는 단기 외주가 아닌 <strong>지속 가능한 서비스 개발
+                                경험</strong>을 가능하게 해주며,
+                                <strong>유지보수까지 고려하는 개발자</strong>로 성장하고자 하는 제 목표와도 잘 맞습니다.<br>
 
-                                    티젠소프트는 다양한 산업군에 솔루션을 제공하고 있어 <strong>도메인 지식을 폭넓게 확장</strong>할 수 있다는 점도 큰 장점이라 생각합니다.<br>
+                                티젠소프트는 다양한 산업군에 솔루션을 제공하고 있어 <strong>도메인 지식을 폭넓게 확장</strong>할 수 있다는 점도 큰 장점이라 생각합니다.<br>
 
-                                    이러한 실무 환경 속에서 <strong>기술과 태도 양면에서 신뢰받는 백엔드 개발자</strong>로 성장하고 싶습니다.
-                                </p>
+                                이러한 실무 환경 속에서 <strong>기술과 태도 양면에서 신뢰받는 백엔드 개발자</strong>로 성장하고 싶습니다.
+                            </p>
 
-                                <h5 class="option-subtitle">신입 Java 웹 개발자 포지션에서 요구하는 역량</h5>
-                                <div class="option-requirements">
-                                    <div class="req-section">
-                                        <p class="req-title">[지원 자격]</p>
-                                        <ul class="req-list">
-                                            <li>Java 및 JSP 기반 웹 서비스 개발 경험 또는 교육 이수자</li>
-                                            <li>Spring Framework 또는 전자정부 프레임워크 사용 경험</li>
-                                            <li>웹 시스템 및 네트워크 환경 이해 (WEB/WAS 등)</li>
-                                            <li>SQL 및 관계형 데이터베이스 활용 가능 (Oracle/MySQL 등)</li>
-                                            <li>문제 해결에 적극적이며, 성실하고 책임감 있는 태도</li>
-                                        </ul>
-                                    </div>
+                            <h5 class="option-subtitle">신입 Java 웹 개발자 포지션에서 요구하는 역량</h5>
+                            <div class="option-requirements">
+                                <div class="req-section">
+                                    <p class="req-title">[지원 자격]</p>
+                                    <ul class="req-list">
+                                        <li>Java 및 JSP 기반 웹 서비스 개발 경험 또는 교육 이수자</li>
+                                        <li>Spring Framework 또는 전자정부 프레임워크 사용 경험</li>
+                                        <li>웹 시스템 및 네트워크 환경 이해 (WEB/WAS 등)</li>
+                                        <li>SQL 및 관계형 데이터베이스 활용 가능 (Oracle/MySQL 등)</li>
+                                        <li>문제 해결에 적극적이며, 성실하고 책임감 있는 태도</li>
+                                    </ul>
+                                </div>
 
-                                    <div class="req-section">
-                                        <p class="req-title">[우대 사항]</p>
-                                        <ul class="req-list">
-                                            <li>컴퓨터공학 및 소프트웨어 관련 전공자</li>
-                                            <li>정보처리기사 등 관련 자격증 보유자</li>
-                                            <li>전자정부 프레임워크 프로젝트 경험자</li>
-                                            <li>다양한 산업 도메인에 대한 이해 또는 관심</li>
-                                            <li>커뮤니케이션 능력이 원활하고 팀워크를 중시하는 분</li>
-                                        </ul>
-                                    </div>
+                                <div class="req-section">
+                                    <p class="req-title">[우대 사항]</p>
+                                    <ul class="req-list">
+                                        <li>컴퓨터공학 및 소프트웨어 관련 전공자</li>
+                                        <li>정보처리기사 등 관련 자격증 보유자</li>
+                                        <li>전자정부 프레임워크 프로젝트 경험자</li>
+                                        <li>다양한 산업 도메인에 대한 이해 또는 관심</li>
+                                        <li>커뮤니케이션 능력이 원활하고 팀워크를 중시하는 분</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- 하이브랩 카드 -->
-                            <div class="company-option">
-                                <img src="src/tech_hivelab.png" alt="하이브랩 로고" class="company-logo">
-                                <h4 class="option-title">하이브랩</h4>
-                                <p class="option-desc">
-                                    하이브랩은 UI/UX, 웹 서비스, 디지털 콘텐츠 등 다양한 분야에서 1,000건 이상의 프로젝트를 수행한
-                                    디지털 전문 기업으로, 삼성, 네이버, CJ, 넷마블 등 대형 파트너사와의 협업 경험을 통해 실전 중심의
-                                    개발 경험을 쌓을 수 있는 환경을 제공합니다.
-                                </p>
+                        <!-- 하이브랩 카드 -->
+                        <div class="company-option">
+                            <img src="src/tech_hivelab.png" alt="하이브랩 로고" class="company-logo">
+                            <h4 class="option-title">하이브랩</h4>
+                            <p class="option-desc">
+                                하이브랩은 UI/UX, 웹 서비스, 디지털 콘텐츠 등 다양한 분야에서 1,000건 이상의 프로젝트를 수행한
+                                디지털 전문 기업으로, 삼성, 네이버, CJ, 넷마블 등 대형 파트너사와의 협업 경험을 통해 실전 중심의
+                                개발 경험을 쌓을 수 있는 환경을 제공합니다.
+                            </p>
 
-                                <h5 class="option-subtitle">'하이브랩'을 가고 싶은 이유</h5>
-                                <p class="option-desc">
-                                    하이브랩은 <strong>실무 중심 프로젝트</strong>를 통해 빠르게 성장 중인 종합 디지털 에이전시로,
-                                    <strong>실제 사용자 요구에 대응하는 개발 경험</strong>을 쌓고 싶은 저에게 매우 매력적인 기업입니다.<br>
+                            <h5 class="option-subtitle">'하이브랩'을 가고 싶은 이유</h5>
+                            <p class="option-desc">
+                                하이브랩은 <strong>실무 중심 프로젝트</strong>를 통해 빠르게 성장 중인 종합 디지털 에이전시로,
+                                <strong>실제 사용자 요구에 대응하는 개발 경험</strong>을 쌓고 싶은 저에게 매우 매력적인 기업입니다.<br>
 
-                                    특히 <strong>Java, Spring Boot, SQL, HTML</strong> 등 제가 배우고 있는 기술 스택과
-                                    <strong>부합</strong>하며,
-                                    <strong>프론트와의 협업 환경</strong>까지 갖춘 점에서 학습 방향과 잘 맞는다고 느꼈습니다.<br>
-                                    또한 <strong>Git, AWS</strong> 등 인프라 기술도 함께 다루며, <strong>서비스 전반을 이해하는 엔지니어</strong>로
-                                    성장할 기반이 마련되어 있다고 생각합니다.<br>
-                                    하이브랩은 <strong>신기술 도전과 학습 열정</strong>을 중시하며, 저 역시 <strong>프로젝트를 통해 능동적으로 배우고 보완해 나가는
-                                    태도</strong>를 갖추고 있어 회사의 인재상과 잘 맞는다고 느꼈습니다.<br>
-                                    다양한 프로젝트를 통해 <strong>실전 역량을 키우고, 함께 성장할 수 있는 환경</strong>이라는 점에서 하이브랩에 큰 매력을 느끼고
-                                    있습니다.
-                                </p>
+                                특히 <strong>Java, Spring Boot, SQL, HTML</strong> 등 제가 배우고 있는 기술 스택과
+                                <strong>부합</strong>하며,
+                                <strong>프론트와의 협업 환경</strong>까지 갖춘 점에서 학습 방향과 잘 맞는다고 느꼈습니다.<br>
+                                또한 <strong>Git, AWS</strong> 등 인프라 기술도 함께 다루며, <strong>서비스 전반을 이해하는 엔지니어</strong>로
+                                성장할 기반이 마련되어 있다고 생각합니다.<br>
+                                하이브랩은 <strong>신기술 도전과 학습 열정</strong>을 중시하며, 저 역시 <strong>프로젝트를 통해 능동적으로 배우고 보완해 나가는
+                                태도</strong>를 갖추고 있어 회사의 인재상과 잘 맞는다고 느꼈습니다.<br>
+                                다양한 프로젝트를 통해 <strong>실전 역량을 키우고, 함께 성장할 수 있는 환경</strong>이라는 점에서 하이브랩에 큰 매력을 느끼고
+                                있습니다.
+                            </p>
 
 
+                            <h5 class="option-subtitle">신입 Java 웹 서비스 개발자 포지션에서 요구하는 역량</h5>
+                            <div class="option-requirements">
+                                <div class="req-section">
+                                    <p class="req-title">[지원 자격]</p>
+                                    <ul class="req-list">
+                                        <li>Java 웹 서비스 개발 프로젝트 경험 또는 교육 이수</li>
+                                        <li>Spring Framework / Spring Boot, JSP 또는 Thymeleaf 사용 경험</li>
+                                        <li>웹 환경(WEB/WAS) 구축 지식</li>
+                                        <li>SQL, MyBatis, MySQL 등 데이터베이스 관련 지식</li>
+                                        <li>HTML, JavaScript 등 UI 기능 구현 기본 지식</li>
+                                        <li>Git을 이용한 소스 형상 관리 경험</li>
+                                    </ul>
+                                </div>
 
-                                <h5 class="option-subtitle">신입 Java 웹 서비스 개발자 포지션에서 요구하는 역량</h5>
-                                <div class="option-requirements">
-                                    <div class="req-section">
-                                        <p class="req-title">[지원 자격]</p>
-                                        <ul class="req-list">
-                                            <li>Java 웹 서비스 개발 프로젝트 경험 또는 교육 이수</li>
-                                            <li>Spring Framework / Spring Boot, JSP 또는 Thymeleaf 사용 경험</li>
-                                            <li>웹 환경(WEB/WAS) 구축 지식</li>
-                                            <li>SQL, MyBatis, MySQL 등 데이터베이스 관련 지식</li>
-                                            <li>HTML, JavaScript 등 UI 기능 구현 기본 지식</li>
-                                            <li>Git을 이용한 소스 형상 관리 경험</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="req-section">
-                                        <p class="req-title">[우대 사항]</p>
-                                        <ul class="req-list">
-                                            <li>컴퓨터공학 등 관련 전공자</li>
-                                            <li>정보처리기사 자격증 소지자</li>
-                                            <li>AWS 경험자 또는 자격증 보유자</li>
-                                            <li>신기술에 대한 도전과 학습에 열정이 있는 분</li>
-                                            <li>협업과 커뮤니케이션 능력이 원활한 분</li>
-                                        </ul>
-                                    </div>
+                                <div class="req-section">
+                                    <p class="req-title">[우대 사항]</p>
+                                    <ul class="req-list">
+                                        <li>컴퓨터공학 등 관련 전공자</li>
+                                        <li>정보처리기사 자격증 소지자</li>
+                                        <li>AWS 경험자 또는 자격증 보유자</li>
+                                        <li>신기술에 대한 도전과 학습에 열정이 있는 분</li>
+                                        <li>협업과 커뮤니케이션 능력이 원활한 분</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -572,6 +612,21 @@
 </main>
 
 <script>
+    function openModal() {
+        document.getElementById("techModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("techModal").style.display = "none";
+    }
+
+    // 바깥 클릭 시 닫기
+    window.onclick = function (event) {
+        const modal = document.getElementById("techModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
     // Initialize Feather icons
     document.addEventListener('DOMContentLoaded', function () {
         feather.replace();
