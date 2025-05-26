@@ -593,25 +593,42 @@ ul, ol {
     color: var(--teal);
 }
 
-.project-overview, .project-features, .project-challenges {
+.project-overview, .project-challenges {
     margin-bottom: 1.5rem;
 }
 
-.project-overview h4, .project-features h4, .project-challenges h4, .project-lessons h4 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+.project-features {
+    background-color: #f9f9fb;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
 }
+
+.project-overview h4, .project-challenges h4, .project-lessons h4, .project-features h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--teal);
+    padding-left: 0.75rem;
+}
+
 
 
 .feature-list {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.5rem;
 }
 
 .feature-list > li {
-    margin-bottom: 1rem;
+    background-color: var(--white);
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
 }
-
 .feature-title {
     font-weight: 600;
     display: block;
@@ -621,6 +638,16 @@ ul, ol {
 .feature-list ul {
     list-style-type: disc;
     margin-left: 1.5rem;
+}
+
+.lessons-box {
+    background-color: rgba(177, 223, 218, 0.39);
+    border-radius: var(--border-radius);
+    padding: 1.5rem 2rem;
+}
+
+.lessons-box p {
+    margin-bottom: 1.5rem;
 }
 /* 공통 카드 스타일 */
 .challenge-card {
@@ -892,12 +919,7 @@ code {
     border-radius: var(--border-radius);
     overflow: hidden;
 }
-.company-logo {
-    width: 120px;
-    height: 120px;
-    display: block;
-    margin: 0 auto 1rem auto;
-}
+
 
 .company-info-card {
     background-color: var(--white);
@@ -1125,55 +1147,88 @@ code {
 }
 
 .company-options {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .company-option {
-    background-color: rgba(0, 0, 0, 0.03);
-    padding: 1rem;
-    border-radius: var(--border-radius);
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.company-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
 }
 
 .option-title {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
-}
-
-.option-desc {
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
 }
 
 .option-subtitle {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    color: #374151;
+    margin-top: 1rem;
+}
+
+.option-desc {
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+.option-desc strong {
+    color: #111827;
+    font-weight: 700;
+}
+
+.option-desc code {
+    font-family: monospace;
+    background: #f1f5f9;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
 }
 
 .option-requirements {
-    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .req-section {
-    margin-bottom: 1rem;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
 }
 
 .req-title {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 0.75rem;
 }
 
 .req-list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #374151;
 }
 
 .req-list li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Future Page Styles */
