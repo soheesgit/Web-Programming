@@ -10,26 +10,23 @@
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-<!-- Navigation Bar -->
+<!-- 내비게이션 바-->
 <header class="navbar">
     <div class="container">
         <div class="navbar-content">
             <a href="index.html" class="logo">문소희 포트폴리오</a>
 
-            <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <a href="index.html" class="nav-link">본인 소개</a>
                 <a href="tech.html" class="nav-link">관심 기술 및 기업</a>
                 <a href="future.html" class="nav-link active">Future Plan</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn">
                 <i data-feather="menu"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation -->
         <nav class="mobile-nav">
             <a href="index.html" class="nav-link">본인 소개</a>
             <a href="tech.html" class="nav-link">관심 기술 및 기업</a>
@@ -516,12 +513,11 @@
 
                                 <h4 class="timeline-subtitle">인턴십 참여가 어려운 경우</h4>
                                 <ul class="timeline-list">
-                                    <li>실제 서비스 시나리오를 반영한 팀 프로젝트 기획 및 실행</li>
-                                    <li>협업 기반 사이드 프로젝트 진행 (기획 – 설계 – 구현 – 배포 전 과정 포함)</li>
-                                    <li>깃허브 활동 강화: 기능 단위 커밋, 브랜치 전략, PR 리뷰 연습 등 협업 중심 개발 습관 정립</li>
-                                    <li>기술 블로그/TIL을 통한 학습 내용 정리 및 커뮤니티 공유</li>
-                                    <li>백엔드 아키텍처 관련 기술서적 및 실전 사례 학습 (ex. MSA, 트래픽 분산 구조, 캐싱 전략 등)</li>
+                                    <li>실제 서비스 시나리오 기반 팀 프로젝트 기획 및 실행</li>
+                                    <li>협업 중심 사이드 프로젝트 (기획 → 설계 → 구현 → 배포 전 과정 경험)</li>
+                                    <li>웹앱, Kotlin 등 취약 영역 집중 보완 및 학습 강화</li>
                                 </ul>
+
                             </div>
                         </div>
 
@@ -554,11 +550,9 @@
 </main>
 
 <script>
-    // Initialize Feather icons
     document.addEventListener('DOMContentLoaded', function() {
         feather.replace();
 
-        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.mobile-nav');
 
@@ -574,7 +568,6 @@
             }
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 10) {
@@ -584,7 +577,6 @@
             }
         });
 
-        // Fade-in animation on scroll
         const sections = document.querySelectorAll('.section');
 
         function checkFade() {
@@ -598,7 +590,6 @@
             });
         }
 
-        // Quick navigation
         const quickNavBtns = document.querySelectorAll('.quick-nav-btn');
 
         quickNavBtns.forEach(btn => {
@@ -615,10 +606,8 @@
                 }
             });
         });
-        // Initial check
         checkFade();
 
-        // Check on scroll
         window.addEventListener('scroll', checkFade);
     });
 </script>

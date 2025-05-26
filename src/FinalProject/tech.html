@@ -9,26 +9,22 @@
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-<!-- Navigation Bar -->
 <header class="navbar">
     <div class="container">
         <div class="navbar-content">
             <a href="index.html" class="logo">문소희 포트폴리오</a>
 
-            <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <a href="index.html" class="nav-link">본인 소개</a>
                 <a href="tech.html" class="nav-link active">관심 기술 및 기업</a>
                 <a href="future.html" class="nav-link">Future Plan</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn">
                 <i data-feather="menu"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation -->
         <nav class="mobile-nav">
             <a href="index.html" class="nav-link">본인 소개</a>
             <a href="tech.html" class="nav-link active">관심 기술 및 기업</a>
@@ -51,7 +47,7 @@
         </div>
         <h1 class="page-title gradient-text-blue">관심 기술 및 관련 기업</h1>
 
-        <!-- Skills Section -->
+        <!-- 기술 -->
         <section id="skills" class="section fade-in">
             <div class="card">
                 <div class="card-header blue-gradient">
@@ -201,7 +197,7 @@
             </div>
         </section>
 
-        <!-- NOL Universe Company Section -->
+        <!-- 놀유니버스 -->
         <section id="company" class="section fade-in">
             <div class="card">
                 <div class="card-header nol-gradient">
@@ -328,7 +324,7 @@
             </div>
         </section>
 
-        <!-- Job Posting Section -->
+        <!-- 채용공고 -->
         <section id="posting" class="section fade-in">
             <div class="card">
                 <div class="card-header blue-gradient">
@@ -472,7 +468,7 @@
             </div>
         </section>
 
-        <!-- Career Preparation Section -->
+        <!-- 또 다른 목표 -->
         <section id="preparation" class="section fade-in">
             <div class="card">
                 <div class="card-header green-gradient">
@@ -620,25 +616,21 @@
         document.getElementById("techModal").style.display = "none";
     }
 
-    // 바깥 클릭 시 닫기
     window.onclick = function (event) {
         const modal = document.getElementById("techModal");
         if (event.target == modal) {
             modal.style.display = "none";
         }
     };
-    // Initialize Feather icons
     document.addEventListener('DOMContentLoaded', function () {
         feather.replace();
 
-        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.mobile-nav');
 
         mobileMenuBtn.addEventListener('click', function () {
             mobileNav.classList.toggle('active');
 
-            // Toggle icon between menu and x
             const icon = this.querySelector('svg');
             if (mobileNav.classList.contains('active')) {
                 feather.replace(icon, {type: 'x'});
@@ -647,7 +639,6 @@
             }
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 10) {
@@ -658,7 +649,6 @@
         });
 
 
-        // Quick navigation
         const quickNavBtns = document.querySelectorAll('.quick-nav-btn');
 
         quickNavBtns.forEach(btn => {
@@ -676,7 +666,6 @@
             });
         });
 
-        // Fade-in animation on scroll
         const sections = document.querySelectorAll('.section');
 
         function checkFade() {
@@ -691,10 +680,8 @@
         }
 
 
-// Initial check
         checkFade();
 
-// Check on scroll
         window.addEventListener('scroll', checkFade);
     });
 </script>
