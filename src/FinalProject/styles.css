@@ -892,6 +892,12 @@ code {
     border-radius: var(--border-radius);
     overflow: hidden;
 }
+.company-logo {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
 
 .company-info-card {
     background-color: var(--white);
@@ -1322,7 +1328,6 @@ code {
 .timeline-container {
     position: relative;
     padding-left: 2rem;
-    border-left: 4px solid rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item {

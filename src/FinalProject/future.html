@@ -40,6 +40,12 @@
 
 <main class="main-content">
     <div class="container">
+
+        <div class="quick-nav">
+            <button class="quick-nav-btn" data-target="goals">2025년의 목표</button>
+            <button class="quick-nav-btn" data-target="plan">구체적인 계획</button>
+        </div>
+
         <h1 class="page-title gradient-text-purple">Future Plan</h1>
 
         <!-- 2025년의 목표 -->
@@ -117,9 +123,8 @@
 
                                         <h5 class="goal-details-title">최종 목표:</h5>
                                         <ul class="goal-list">
-                                            <li>실전 개발 경험 쌓기</li>
+                                            <li>실전 팀프로젝트 협업 경험 쌓기</li>
                                             <li>포트폴리오에 활용 가능한 프로젝트 완성</li>
-                                            <li>단순 구현에서 그치지 않고, 계속해서 발전시키기</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -130,7 +135,7 @@
                                     <div class="goal-meta">
                                         <div class="meta-item purple">
                                             <p class="meta-label">기간</p>
-                                            <p class="meta-value">2025년 여름방학 ~ 2026년 겨울방학</p>
+                                            <p class="meta-value">2025년 여름방학, 2026년 겨울방학</p>
                                         </div>
                                         <div class="meta-item purple">
                                             <p class="meta-label">형태</p>
@@ -149,9 +154,9 @@
                                         <h5 class="goal-details-title">목표:</h5>
                                         <ul class="goal-list">
                                             <li>서비스 기획부터 DB 설계, 개발, AWS 배포까지 직접 진행</li>
-                                            <li>React 기반 프론트엔드 페이지도 AI 활용하여 간단히 직접 구성</li>
+                                            <li>AI를 활용해 프론트엔드 페이지까지 직접 구성</li>
                                             <li>웹앱 구현 및 AWS 배포 방식에 대한 학습 병행</li>
-                                            <li>GitHub에 전체 프로젝트 기록(이슈 관리, 커밋, 브랜치 전략 등)을 저장</li>
+                                            <li>GitHub에 전체 프로젝트 기록을 저장</li>
                                             <li>Tistory 블로그에 개발 과정과 회고 내용 기록</li>
                                         </ul>
 
@@ -164,9 +169,9 @@
 
                                         <h5 class="goal-details-title">프로젝트 주제2: 날씨 기반 코디 추천 웹앱</h5>
                                         <ul class="goal-list">
-                                            <li>: 사용자가 보유한 옷을 등록하면, 날씨에 맞춰 추천 코디 제공</li>
-                                            <li>: 기상청 API 연동하여 실시간 기온/강수 정보 반영</li>
-                                            <li>: 옷별 태그(계절, 격식, 색상 등) 기반 추천 알고리즘 적용</li>
+                                            <li>사용자가 보유한 옷을 등록하면, 날씨에 맞춰 추천 코디 제공</li>
+                                            <li>기상청 API 연동하여 실시간 기온/강수 정보 반영</li>
+                                            <li>옷별 태그(계절, 격식, 색상 등) 기반 추천 알고리즘 적용</li>
                                             <li>React + Spring Boot + MySQL 구조로 구현 예정</li>
                                         </ul>
                                     </div>
@@ -220,7 +225,7 @@
 
                                         <h5 class="goal-details-title">추가 계획:</h5>
                                         <ul class="goal-list">
-                                            <li>티스토리에 풀이 방식과 어려웠던 점, 로직 해설 정리</li>
+                                            <li>Tistory에 풀이 방식과 어려웠던 점, 로직 해설 정리</li>
                                             <li>2026 상반기 코딩 테스트를 목표로 실전 감각 유지</li>
                                         </ul>
                                     </div>
@@ -258,7 +263,6 @@
                             </div>
                         </div>
 
-                        <!-- 자격증 취득 -->
                         <div class="goal-card">
                             <h3 class="goal-title green">3️⃣ 자격증 취득 목표</h3>
 
@@ -308,7 +312,7 @@
                                 </div>
 
                                 <div class="cert-item">
-                                    <h4 class="cert-title">3-3. TOEIC 700점 이상</h4>
+                                    <h4 class="cert-title">3-3. TOEIC (700점 이상)</h4>
                                     <div class="cert-details">
                                         <div class="cert-section">
                                             <p class="cert-label">응시 예정일:</p>
@@ -335,8 +339,7 @@
                 </div>
             </div>
         </section>
-        <!-- 2025 ~ 2026 실전 역량 강화 계획 -->
-        <section class="section fade-in">
+        <section id="plan" class="section fade-in">
             <div class="card">
                 <div class="card-header amber-gradient">
                     <h2 class="card-title gradient-text-amber">2025 ~ 2026 실전 역량 강화 계획</h2>
@@ -351,19 +354,19 @@
                             <h3 class="timeline-title amber">2025년 7월 (여름방학 시작)</h3>
                             <div class="timeline-content">
                                 <h4 class="timeline-subtitle">운영체제 기초 학습</h4>
-                                <p>「혼자 공부하는 컴퓨터 구조 + 운영체제」 도서를 활용하여 운영체제 필수 개념(프로세스, 스레드, 메모리, 스케줄링 등) 독학</p>
-                                <p>→ 티스토리, Notion 정리 병행</p>
+                                <p>「혼자 공부하는 컴퓨터 구조 + 운영체제」 도서를 활용하여 운영체제 필수 개념 독학</p>
+                                <p>→ Tistory, Notion 정리 병행</p>
 
                                 <h4 class="timeline-subtitle">창업동아리 프로젝트 진행 시작</h4>
                                 <p>AI 기반 동네 추천 플랫폼 백엔드 개발 본격화</p>
-                                <p>→ NCF 추천 알고리즘 설계 및 사용자 기반 API 구현</p>
+                                <p>→ NCF 추천 알고리즘 완성 및 사용자 기반 API 구현</p>
 
                                 <h4 class="timeline-subtitle">토이 프로젝트 1차 개발 시작</h4>
                                 <ul class="timeline-list">
-                                    <li>주제: 위치 + 날씨 기반 실시간 동네 산책 루트 추천 웹앱</li>
-                                    <li>기술 스택: Java, Spring Boot, Open API (기상청, 위치 정보 등)</li>
-                                    <li>개발 범위: 백엔드 중심으로 API 설계, 날씨·위치 정보 수집, 사용자 요청에 따른 맞춤 산책 경로 제공 기능 구현</li>
-                                    <li>개발 형태: 개인 기획 기반, 백엔드 단독 개발 → 기능 설계 및 구조 설계부터 시작</li>
+                                    <li>주제: 이력서/자기소개서 관리 웹</li>
+                                    <li>기술 스택: Java, Spring Boot, React</li>
+                                    <li>개발 범위: 지원 이력 관리 기능 (회사별 이력서/자소서 업로드, 지원 일자·결과·면접 일정 기록, 상태 태그 관리)</li>
+                                    <li>개발 형태: 개인 주도 기획 및 개발, 백엔드와 프론트엔드 전체 구조 설계부터 직접 구현 예정</li>
                                 </ul>
 
                                 <h4 class="timeline-subtitle">자격증 시험 접수</h4>
@@ -386,7 +389,6 @@
                                 <ul class="timeline-list">
                                     <li>사용자 피드백 수용 가능한 형태로 배포</li>
                                     <li>GitHub Readme 정비 및 기능 설명 문서화</li>
-                                    <li>기능별 API 명세서 작성</li>
                                 </ul>
 
                                 <h4 class="timeline-subtitle">ADSP, SQLD 자격증 시험 응시</h4>
@@ -412,22 +414,18 @@
                                     <li>9/14(1차) / 9/28(2차, 필요 시 재응시)</li>
                                 </ul>
 
-                                <h4 class="timeline-subtitle">코딩테스트 집중 준비</h4>
+                                <h4 class="timeline-subtitle">코딩테스트 심화 준비</h4>
                                 <ul class="timeline-list">
-                                    <li>주 3~4회 백준/프로그래머스 문제 풀이</li>
-                                    <li>알고리즘 유형별 분류 및 시간 복잡도 분석 연습</li>
+                                    <li>주 3~4회 백준/프로그래머스 문제 풀이 진행</li>
+                                    <li>김영한의 실전 자바 중급 2편 수강 → ArrayList, LinkedList 등 자료구조 학습</li>
                                 </ul>
 
                                 <h4 class="timeline-subtitle">Spring Boot 심화 실습</h4>
                                 <ul class="timeline-list">
-                                    <li>실습 기반 강의 수강 + 기능별 간단 서비스 구현 병행</li>
-                                    <li>예외 처리, API 보안, 트랜잭션 처리 등 고급 개념 학습</li>
-                                </ul>
-
-                                <h4 class="timeline-subtitle">창업동아리 프로젝트 기능 확장</h4>
-                                <ul class="timeline-list">
-                                    <li>MVP 기능 완성 → 관리자 기능 및 추천 정확도 개선</li>
-                                    <li>배포 준비 및 피드백 대응 로직 반영</li>
+                                    <li>스프링 핵심 원리 - 기본편(김영한) 강의 재수강</li>
+                                    <li>2월 중 수강 예정이었으나, 구현 경험 부족으로 이해 어려움 → 프로젝트 경험 이후로 수강 시점 조정</li>
+                                    <li>한 달에 한 편씩 인프런 시리즈 수강
+                                        (HTTP 웹 기본 지식, 스프링 MVC 1편, 스프링 MVC 2편)</li>
                                 </ul>
                             </div>
                         </div>
@@ -441,8 +439,10 @@
                             <div class="timeline-content">
                                 <h4 class="timeline-subtitle">토이 프로젝트 2차 개발 시작</h4>
                                 <ul class="timeline-list">
-                                    <li>주제: 실생활 기반 서비스 구현</li>
-                                    <li>데이터베이스 설계 및 API 시나리오 우선 정의</li>
+                                    <li>주제: 날씨 기반 코디 추천 웹앱</li>
+                                    <li>기술 스택: Java, Spring Boot, React, MySQL</li>
+                                    <li>개발 범위: 사용자 옷장 등록 → 날씨 데이터 기반 코디 추천 (기상청 API 활용, 태그 기반 추천 로직 구현)</li>
+                                    <li>개발 형태: 개인 주도 기획 및 개발, 백엔드와 프론트엔드 전체 구조 직접 설계 및 구현 예정</li>
                                 </ul>
 
                                 <h4 class="timeline-subtitle">정보처리기사 필기시험 접수</h4>
@@ -466,11 +466,12 @@
                                 <h4 class="timeline-subtitle">정보처리기사 필기 시험 응시</h4>
                                 <p>학습 정리 후 기출 문제 풀이 반복</p>
 
-                                <h4 class="timeline-subtitle">창업동아리 결과 정리</h4>
+                                <h4 class="timeline-subtitle">창업동아리 프로젝트 마무리</h4>
                                 <ul class="timeline-list">
-                                    <li>성과 발표 자료 및 기술보고서 정리</li>
-                                    <li>유지보수 방향성 도출</li>
+                                    <li>반복 요청 처리 방식, 예외 처리 설계 등 코드 안정성 개선 방향 정리</li>
+                                    <li>협업 시 문제되었던 Git 브랜치 전략, API 응답 일관성 관련 회고 진행</li>
                                 </ul>
+
                             </div>
                         </div>
 
@@ -483,9 +484,10 @@
                             <div class="timeline-content">
                                 <h4 class="timeline-subtitle">캡스톤 프로젝트 수행</h4>
                                 <ul class="timeline-list">
-                                    <li>실제 문제 해결형 주제를 기반으로 진행</li>
-                                    <li>팀 단위 협업 + Git 관리 + 발표 연습 포함</li>
+                                    <li>Spring Boot 기반 웹을 팀 단위로 개발하며, 백엔드 구조 설계와 API 구현을 주도적으로 담당함</li>
+                                    <li>협업을 위해 Git 브랜치 전략과 Swagger 기반 문서화를 적용하며 실무에 가까운 방식으로 운영</li>
                                 </ul>
+
 
                                 <h4 class="timeline-subtitle">정보처리기사 실기 시험 응시 (4월 예정)</h4>
 
@@ -507,7 +509,7 @@
                                 <h4 class="timeline-subtitle">하계 인턴십 참여</h4>
                                 <ul class="timeline-list">
                                     <li>실무 백엔드 개발 업무 경험</li>
-                                    <li>협업 도구(Git, Jira 등) 및 CI/CD 환경 활용 실습</li>
+                                    <li>협업 도구 및 CI/CD 환경 활용 실습</li>
                                     <li>코드 리뷰, 회의 참여를 통해 실전 중심의 커뮤니케이션 및 개발 문화 적응</li>
                                     <li>실무에서 요구되는 백엔드 구조 및 데이터 흐름 이해도 향상</li>
                                 </ul>
@@ -526,7 +528,7 @@
                         <!-- 2026년 9월 ~ 12월 -->
                         <div class="timeline-item">
                             <div class="timeline-icon green">
-                                <i data-feather="graduation-cap" class="timeline-icon-inner"></i>
+                                <i data-feather="calendar" class="timeline-icon-inner"></i>
                             </div>
                             <h3 class="timeline-title green">2026년 9월 ~ 12월 (4학년 2학기)</h3>
                             <div class="timeline-content">
@@ -596,19 +598,28 @@
             });
         }
 
+        // Quick navigation
+        const quickNavBtns = document.querySelectorAll('.quick-nav-btn');
+
+        quickNavBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
         // Initial check
         checkFade();
 
         // Check on scroll
         window.addEventListener('scroll', checkFade);
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
-<script>
-    new fullpage('#fullpage', {
-        autoScrolling: true,
-        scrollHorizontally: false,
-        navigation: true
     });
 </script>
 </body>
